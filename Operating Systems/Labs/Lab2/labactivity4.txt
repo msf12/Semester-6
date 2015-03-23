@@ -1,0 +1,4 @@
+sudo chmod a+rwx .
+
+chmod cannot be used to create a file that cannot be read, written, or executed
+(sudo chmod 000 [file] is close, but the superuser still has access)

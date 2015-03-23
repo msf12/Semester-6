@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\usepackage{qtree}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\begin{document}
+
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=blue!20, node distance=3cm,
+    minimum height=2em]
+
+\title{Homework 1}
+\author{Mitchel Fields}
+\date{2/25/15}
+\maketitle
+
+\begin{enumerate}
+% 1
+
+	\item C
+	\item D
+	\item D
+	\item D
+	\item A
+	\item B
+	\item A
+	\item D
+	\item B
+	\item B
+
+	\item D
+	\item A
+	\item A
+	\item A
+	\item C
+
+	\item C
+	\item D
+	\item C
+	\item A
+	\item C
+% 21
+	\item D
+	\item D
+	\item C
+	\item D
+
+	\item B
+	\item A
+	\item B
+	
+	\item 
+	\begin{enumerate}
+	\renewcommand{\theenumi}{\Alph{enumi}}
+		\item A process is a running instance of a program.
+		\item A process can be new, ready, running, waiting, and terminated.
+		\item \hspace{0pt}\\
+		\begin{tikzpicture}[node distance = 2cm, auto]
+		    % Place nodes
+		    \node [cloud] (run) {Running};
+		    \node [cloud, left of=run] (new) {New};
+		    \node [cloud, right of=run] (end) {Terminated};
+		    \node [cloud, below of=new] (ready) {Ready};
+		    \node [cloud, below of=end] (wait) {Waiting};
+		    % Draw edges
+		    \path [line] (new) -- (run);
+		    \path [line] (run) -- (end);
+		    \path [line] (run) -- (wait);
+		    \path [line] (ready) -- (run);
+		    \path [line] (wait) -- (ready);
+		\end{tikzpicture}
+		\item A process cannot \textit{directly} transition from waiting to running, though it can achieve close to it if there are no processes ahead of it in the ready queue or running the moment it is done waiting.
+	\end{enumerate}
+	\item The program creates 8 processes.
+	\Tree [ .{pid = 0} [ .{pid = 1} [ .{pid = 4} {pid = 7} ] {pid = 5} ] [ .{pid = 2} {pid = 6} ] {pid = 3} ]
+	
+	\item A, B, C, and E
+% 31
+	\item A multithreaded program using multiple user threads performs better on multiprocessor system so long as the thread implementation is not many-to-one, as any other implementation allows for threads to be scheduled across the multiple proccessers and, therefore, run in parallel instead of just concurrently.
+
+	\item
+	\begin{enumerate}
+	\renewcommand{\theenumi}{\Alph{enumi}}
+		\item A: 0, B: 3, C: 9, D: 13
+		\item A: 0, B: 3, C: 9, D: 13
+		\item A: 0, B: 9, C: 4, D: 8
+		\item A: 6, B: 9, C: 9, D:6
+	\end{enumerate}
+
+	\item 
+	\begin{enumerate}
+	\renewcommand{\theenumi}{\roman{enumi}}
+		\item The above code uses the atomic TestAndSet of the lock to ensure that only the first process to execute that line progresses to the critical section. After the critical section, the lock is reset. As a result the above code ensures mutual exclusion.
+		\item Only one thread can access the critical section at a time, effectively creating a bounded limit of zero.
+	\end{enumerate}
+\end{enumerate}
+	
+\end{document}

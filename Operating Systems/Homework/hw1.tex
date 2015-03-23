@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Homework 1}
+\author{Mitchel Fields}
+\date{2/11/15}
+\maketitle
+
+\begin{enumerate}
+	\item Multiprogramming is when a CPU uses time when a program is not running (such as when I/O occurs) to run a different program. Multitasking is when a CPU runs multiple programs concurrently by switching between them rapidly.
+	\item It is a good idea to overlap computation and I/O in order to make the most efficient and effective use possible of the time the CPU waits when a program is executing I/O.
+	\item The distinction between User and Kernel mode is to protect certain files and processes from user interaction that are only safely executed by the kernel.
+	\item I/O interacts directly with system hardware and, as such, is something reserved for kernel access only, to both prevent users from tampering with the hardware and to allow for abstractions without needing to know the I/O implementation of the OS.
+	\item \begin{itemize}
+		\item Kernel mode
+		\item User mode
+		\item User mode
+		\item Kernel mode
+	\end{itemize}
+	\item System calls transfer control to the kernel for the execution of privileged instructions, such as I/O.
+	\item Parameters can be passed via general purpose registers or the stack.
+	\item Memory protection is the restriction of areas of memory based on level of privilege. For example, memory where root processes are being executed is forbidden to users.
+	\item Monolithic architectures are much harder to debug and organize, but require less files to be read and have all of the essential code in one place.
+	\item A trap vector is a mapping of a User mode instruction to a location in memory where the required Kernel mode instruction lies. For example, printf() would map to some hexidecimal memory location 0x... where the appropriate I/O routines for the kernel are stored so that the system executes the correct function.
+\end{enumerate}
+	
+\end{document}

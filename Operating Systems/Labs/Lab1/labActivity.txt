@@ -1,0 +1,49 @@
+[1] Notable Computer Systems. Operating systems have not arrived at their current state overnight: there have been many steps along the way. Some of these prior efforts are famous within the computing community, and are worthwhile background knowledge for you as a student of computer science. Listed below are a number of historical computer systems that have achieved noteworthiness in one way or another. Write a sentence or two describing what was distinctive or innovative about each one in its time. If you cannot find specific information about the OS used on a particular computer, then make an educated guess based upon its age and intended function.
+
+a. UNIVAC:  One of the first commercially available computers in the US. It used a very rudimentary and simple OS to handle IO.
+b. Whirlwind:  The Whirlwind was one of the first digital electronic computers to do real-time computations based on user inputs via a console, and had a minimal OS to facilitate that.
+c. IBM 7090:  The transistorized version of the IBM 709 and had an OS called IBSYS that supported multiple programming languages and featured data IO using data channels connected to tape drives.
+d. GE-645:  Used the Multics OS and supported virtual memory and multiprogramming and, as a result, was often used in multiple user settings.
+e. Data General Eclipse MV/8000: The first of Data General's 32-bit minicomputer. It ran the AOS operating system, which had 8 distinct rings of privilege to protect data.
+f. PDP-11: A competitor to the Data General computers that used one bus for memory access and IO, supported 4 levels of interrupt vectors, and was designed for easier mass-production. 
+g. Cray-1:  
+h. Connection Machine: 
+i. Apple II: 
+j. Commodore Amiga
+
+[2] Explain the difference between uniprogramming and multiprogramming. Can you implement multiprogramming on a uniprocessor? Can you implement uniprogramming on a multiprocessor?
+
+Uniprogramming is sequential execution of programs whereas multiprogramming is sequential execution of parts of programs, which are rapidly switched between to give the appearance of parallelism and to allow the CPU to continue doing work while a program halts for IO. Both can be implemented on uniprocessors and multiprocessors.
+
+[3] The issue of resource utilization shows up in different forms in different types of operating systems. List what resources must be managed carefully in the following settings:
+a. Mainframe or minicomputer systems
+b. Workstations connected to servers 
+c. Handheld computers
+
+[4] Under what circumstances would a user be better off using a time- sharing system rather than a PC or a single-user workstation?
+
+[5] In a multiprogramming and time-sharing environment, several users share the system simultaneously. This situation can result in various security problems.
+a. What are two such problems?
+b. Can we ensure the same degree of security in a time-shared machine as in a dedicated machine? Explain your answer.
+
+[6] Describe some of the challenges of designing operating systems for mobile devices compared with designing operating systems for traditional PCs.
+
+[7] Identify several advantages and several disadvantages of open-source operating systems. Include the types of people who would find each aspect to be an advantage or a disadvantage.
+
+[8]Efficiency Computations. Consider the following definitions:
+
+Utilization = time_used/ total_time_elapsed 
+Throughput = jobs_completed/total_time_elapsed 
+Latency = total_time_elapsed
+
+Given the sets of jobs described below, calculate the overall CPU utilization, throughput, and latency, as well as the latency of each individual process, under the conditions described in each section.
+
+Job 1:   Requires 8 CPU minutes total. Assume that I/O and memory latency for this job limit CPU 		      usage to a maximum of 80%. (Hence, running by itself it will finish in 10 minutes.)
+
+Job 2:    3 CPU minutes, 60% max. 
+
+Job 3:   2.4 CPU minutes, 30% max. 
+
+Job 4:   1.6 CPU minutes, 10% max.
+
+a. Assume serial batch processing. In other words, the jobs are processed one at a time, starting with Job 1 and ending with Job 4. Unused CPU goes to waste.

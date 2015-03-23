@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{listings}
+\usepackage{qtree}
+\usepackage{ulem}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\begin{document}
+\title{Homework 7}
+\date{}
+\maketitle
+
+
+% 1. Textbook 2.4.2 (assume we'd also like to support delete operations)
+% 2. Textbook 2.4.4
+% 3. Textbook 2.4.11, 2.4.12
+% 4. Textbook 2.4.14
+% 5. Spring 2008 #5, Fall 2008 #4, Fall 2009 #3, etc.
+
+\paragraph{\Large 1. Question 2.4.2}\mbox{}\\
+Criticise the following idea: To implement \textit{find the maximum} in constant time, why not use a stack or a queue, but keep track of the maximum value inserted so far, then return that value for \textit{find the maximum} (assume we'd also like to support delete operations)?\\
+
+If the queue or stack supports any sort of remove or delete operation (such as pop or dequeue), the structure would also need to check at that point if the maximum value is being removed and then iterate through the entire structure to find the new maximum. Simply keeping track of the largest value inserted would not work in either case.
+
+\paragraph{\Large 2. Question 2.4.4}\mbox{}\\
+Is an array that is sorted in decreasing order a max-oriented heap?\\
+
+Yes. The root is the max value, its children are second and third largest, and their children continue that pattern. The final value would be the smallest value of the heap and also the final leaf in the deepest level of the tree.
+
+\paragraph{\Large 3. Question 2.4.11 and 2.4.12}\mbox{}\\
+Suppose that your application will have a huge number of \textit{insert} operations, but only a few \textit{remove the maximum} operations. Which priority-queue implementation do you think would be most effective: heap, unordered array, or ordered array?\\
+
+An unordered array would be the most effective as it can do insertions in constant time and the cost of the linear operation to remove a maximum value would be outweighed by the benefit to insert.\\
+
+\noindent Suppose that your application will have a huge number of \textit{find the maximum} operations, but a relatively small number of \textit{insert} and \textit{remove the maximum} operations. Which priority-queue implementation do you think would be most effective: heap, unordered array, or ordered array?\\
+
+A max-oriented heap would be the most beneficial in this case, as the maximum value is always the first element of the heap, far outweighing the cost of the logarithmic \textit{insert} and \textit{remove the maximum} operations.
+
+\paragraph{\Large 4. 2.4.14}\mbox{}\\
+What is the minimum number of items that must be exchanged during a \textit{remove the maximum} operation in a heap of size $N$ with no duplicate keys? Give a heap of size 15 for which the minimum is achieved. Answer the same questions for two and three successive \textit{remove the maximum} operations.\\
+
+The minimum number of exchanges $X = \left \lfloor{\lg{N}}\right \rfloor - 1$ for one \textit{remove the maximum} operation.\\
+
+\Tree [ .\textbf{15} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{14} [ .10 8 9 ] [ .\textbf{13} 11 \textbf{12} ] ] ]
+\Tree [ .\textbf{14} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{13} [ .10 8 9 ] [ .\textbf{12} 11 \sout{15} ] ] ]\\\\
+
+Successive operations change the formula slightly to $X = (\left \lfloor{\lg{N}}\right \rfloor - 1) + (\left \lfloor{\lg{(N-1)}}\right \rfloor - 1) + ...$
+
+\Tree [ .\textbf{15} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{14} [ .10 8 9 ] [ .\textbf{13} 11 \textbf{12} ] ] ]
+\Tree [ .\textbf{14} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{13} [ .10 8 9 ] [ .\textbf{12} 11 \sout{15} ] ] ]
+\Tree [ .\textbf{13} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{12} [ .10 8 9 ] [ .\textbf{11} \sout{14} \sout{15} ] ] ]
+\Tree [ .\textbf{12} [ .7 [ .5 1 2 ] [ .6 3 4 ] ] [ .\textbf{11} [ .10 8 \sout{12} ] [ .\textbf{9} \sout{14} \sout{15} ] ] ]
+
+\paragraph{\Large 5. One of the following Midterm questions: Spring 2008 Question 5, Fall 2008 Question 4, Fall 2009 Question 3, etc.}\mbox{}\\
+
+\subparagraph{\large Spring 2008 Question 5}\mbox{}\\
+
+Consider the following binary heap (i.e., the array-representation of a heap-ordered complete
+binary tree).\\
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+\hline 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13\\ \hline
+- & Z & W & Y & T & G & K & V & R & S & F & A & - & - \\ \hline
+\end{tabular}\\
+\begin{enumerate}
+\renewcommand{\theenumi}{\Alph{enumi}}
+	\item Delete the maximum key. Give the resulting binary heap. Circle those values that changed.\\
+
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+\hline 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13\\ \hline
+- & \circled{Y} & W & \circled{V} & T & G & K & \circled{A} & R & S & F & \circled{\sout{Z}} & - & - \\ \hline
+\end{tabular}\\
+
+	\item Insert the key X into the original binary heap. Give the resulting binary heap. Circle those values that changed.\\
+
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+\hline 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13\\ \hline
+- & Z & W & Y & T & G & \circled{X} & V & R & S & F & A & \circled{K} & - \\ \hline
+\end{tabular}\\
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+\title{Homework 6}
+\date{}
+\maketitle
+
+
+% 1. Give a worst-case input for non-random quicksort that chooses the leftmost element as a pivot. Why is a best case input hard to think of?
+% 2. Textbook 2.3.8
+% 3. Textbook 2.3.11
+% 4. Spring 2013 midterm, #4a
+
+\paragraph{\Large 1. Study Guide Question}\mbox{}\\
+Give a worst-case input for non-random quicksort that chooses the leftmost element as a pivot. Why is a best case input hard to think of?\\
+
+A worst case for such a quicksort algorithm would be an already sorted list. The sort would end up using the elements in order from smallest to largest as pivots. The best case is much harder to determine because it depends on every pivot chosen being the direct center of its respective sub-list.
+
+\paragraph{\Large 2. Question 2.3.8}\mbox{}\\
+About how many compares will Quick.sort() make when sorting and array of $N$ items that are all equal?\\
+
+$N \lg N$ because an array of equal items will cause every partition to divide its respective sub-array in half.
+
+\paragraph{\Large 3. Question 2.3.11}\mbox{}\\
+Suppose that we scan over items with keys equal to the partitioning item's key instad of stopping the scans when we encounter them. Show that the running time of this version of quicksort is quadratic for all arrays with just a constant number of distinct keys.\\
+
+
+\paragraph{\Large 4. Fall 2013 Midterm Question 3a}\mbox{}\\
+Show the results after 2-way partitioning. Use the I at
+the far left as your pivot (and yes, 2-way partitioning
+is the standard version from lecture).\\
+I M I W R F D T T O S D E E P\\
+
+I M I W R F D T T O S D E E P
+
+I E I W R F D T T O S D E M P
+
+I E I E R F D T T O S D W M P
+
+I E I E D F D T T O S R W M P
+
+E I E D F D I T T O S R W M P
+
+\end{document}

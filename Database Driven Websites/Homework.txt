@@ -1,0 +1,17 @@
+create a class called BasicFiles. This class has the following attributes:
+name of a file, as a string
+content of a file, as an array of strings.
+you should provide methods that do the following:
+assign a value to the name of the file.
+read the content of the file whose name is stored in the name attribute. Store that content into an array.
+
+Create a second class, called BetterFile, which inherits from BasicFiles. This class adds the following attributes:
+the number of lines and number of characters in the file.
+modify the method that reads the file so that it counts the number of lines and characters in the file, after reading them into its storing array, and sets the corresponding attributes.
+add a method that does the following:
+asks the user for a string.
+counts how many times that string appears in the file, and prints that information.
+Asks the user if they want to replace the string with some other string.
+if the user simply hits enter without giving a new string, it does not substitute anything.
+if the user enters a string, it replaces one string with the other, and asks the user under what name the new file should be saved.
+Finally, run this code with the file provided on the moodle page. After reading the content of the file, search for string 0.0506303551725 . Replace that string with a -0.111111111. Store the content of the revised file, and uploaded together with your code.

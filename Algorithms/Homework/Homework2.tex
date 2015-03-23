@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+\title{Homework 2}
+\date{}
+\maketitle
+
+\paragraph{\Large 1. Question 1.4.4}\mbox{}\\
+Develop a table like the one on page 181 for TwoSum.\\
+\begin{lstlisting}[language=Java]
+public class TwoSum {
+    public static int count(int[] a) {
+        /* BLOCK A */
+        int N = a.length;
+        int cnt = 0;
+        for (int i = 0; i < N; /* BLOCK B */ i++)
+            for (int j = i+1; j < N; /* BLOCK C */ j++)
+                if (a[i] + a[j] + a[k] == 0)
+                    /* BLOCK D */ cnt++;
+        /* BLOCK A CONTINUED */
+        return cnt;
+    }
+    ...
+}
+\end{lstlisting}
+\begin{tabular}{c c c c}
+statement block & time in seconds & frequency & total time \\ \hline
+D & $t_0$ & $x$ (depends on input) & $t_0x$ \\
+C & $t_1$ & $N^2/2+N/2$ & $t_1(N^2/2-N/2)$\\
+B & $t_2$ & $N$ & $t_2N$ \\
+A & $t_3$ & 1 & $t_3$ \\
+\end{tabular}
+
+
+\paragraph{\Large 2. Fall 2010 Midterm Question 1d}\mbox{}\\
+Consider the following Java data type definition for a 2-3 tree, where the nested class
+Node represents either a 2-node or a 3-node.
+\begin{lstlisting}[language=Java]
+public class TwoThreeTree<Key extends Comparable<Key>, Value> {
+    private Node root;
+    private class Node {
+        private int count; // subtree count
+        private Key key1, key2; // the one or two keys
+        private Value value1, value2; // the one or two values
+        private Node left, middle, right; // the two or three subtrees
+    }
+    ...
+}
+\end{lstlisting}
+How much memory (in bytes) does each Node object consume?
+
+Node - 16 bytes of overhead + 8 bytes of extra overhead because Node is nested\\
+count - 8 bytes (4 int bytes + 4 bytes of padding)\\
+key1 and key2 - 8 bytes each (references)\\
+value1 and value 2 - 8 bytes each (references)\\
+left, middle, right - 8 bytes each (references)\\
+
+$16 + 8 + 8 + 8*2 + 8*2 + 8*3 = 88$ bytes per Node\\
+
+\paragraph{\Large 3. Fall 2011 Midterm Question 2}\mbox{}\\
+Suppose that you collect the following timing data for a program as a function of the input
+size $N$.\\\\
+\begin{tabular}{c | c}
+N & time \\ \hline
+125 & 0.03 sec \\
+1,000 & 1.00 sec \\
+8,000 & 32.00 sec \\
+64,000 & 1,024.00 sec \\
+512,000 & 32,768.00 sec
+\end{tabular}\\\\
+Estimate the running time of the program (in seconds) as a function of $N$ and use tilde
+notation to simplify your answer.\\
+\textit{Hint}: recall that $\log_b a = \lg a / \lg b$:\\
+
+\begin{tabular}{c | c}
+Ratio $8N/N$ & Ratio T$(8N)/$T$(N)$ \\ \hline
+8 & 33.33333... \\
+8 & 32 \\
+8 & 32 \\
+8 & 32 \\
+8 & 32 \\
+\end{tabular}\\
+
+\noindent $\lg 32/\lg 8 = \log_8 32 = 5/3 \\
+b = 5/3 \\
+a*1000^{5/3}=1.00\\
+a=1/100000
+T(N) = 1/100000N^{5/3} \sim N^{5/3}$
+
+\end{document}

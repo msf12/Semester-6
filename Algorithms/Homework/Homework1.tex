@@ -1,0 +1,191 @@
+\documentclass{article}
+
+\usepackage{qtree}
+
+\begin{document}
+\qtreecenterfalse
+\title{Homework 1}
+\date{}
+\maketitle
+
+\paragraph{\Large 1. Question 1}\mbox{}\\
+What are the best-case and worst-case tree heights for weighted quick-union and weighted quick-union with path compression? Give your answers in terms of order of growth.
+\subparagraph{\large Weighted QU}\mbox{}\\
+\indent
+	Worst case: height is log N\\
+\indent
+	Best case: 1
+
+
+\paragraph{\Large 2. Question 2}\mbox{}\\
+Textbook: 1.5.1, 1.5.2, 1.5.3
+
+\subparagraph{\large 1.5.1} Show the contents of the id[] array and the number of times the array is accessed for each input pair when you use quick-find for the sequence 9-0 3-4 5-8 7-2 2-1 5-7 0-3 4-2.\\\\
+
+\textbf{Initial array}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9
+
+\textbf{9-0}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{9}\\
+Value: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{0}
+
+\textbf{3-4}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{4} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}0
+
+\textbf{5-8}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{8} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}0
+
+\textbf{7-2}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}\textbf{2} \hspace{4pt}8 \hspace{4pt}0
+
+\textbf{2-1}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}\textbf{1} \hspace{4pt}8 \hspace{4pt}0
+
+\textbf{5-7}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{1} \hspace{4pt}6 \hspace{4pt}\textbf{1} \hspace{4pt}8 \hspace{4pt}0
+
+\textbf{0-3}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{9}\\
+Value: \hspace{4pt}\textbf{4} \hspace{4pt}1 \hspace{4pt}1 \hspace{4pt}\textbf{4} \hspace{4pt}4 \hspace{4pt}1 \hspace{4pt}6 \hspace{4pt}1 \hspace{4pt}8 \hspace{4pt}\textbf{4}
+
+\textbf{4-2}\\
+2 array accesses for connected() and 21 for union()\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{9}\\
+Value: \hspace{4pt}\textbf{1} \hspace{4pt}1 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}1 \hspace{4pt}6 \hspace{4pt}1 \hspace{4pt}8 \hspace{4pt}\textbf{1}
+
+\subparagraph{\large 1.5.2} Same as 1.5.1 but use quick-union. In addition, draw the forest of trees represented by the id[] array after each input pair is processed\\\\
+
+(Need to add number of array accesses)
+
+\textbf{Initial array}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+\textbf{Tree}\\
+0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9
+
+\textbf{9-0}\\
+2 array accesses for connected() and 3 for union()\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{9}\\
+Value: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{0}\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8
+
+\textbf{3-4}\\
+2 array accesses for connected() and 3 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{4} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8
+
+\textbf{5-8}\\
+2 array accesses for connected() and 3 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{8} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{7-2}\\
+2 array accesses for connected() and 3 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}\textbf{2} \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}\Tree [ .2 7 ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{2-1}\\
+2 array accesses for connected() and 3 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}\Tree [ .1 [ .2 7 ] ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{5-7}\\
+8 array accesses for connected() and 9 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}\textbf{8} \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{1} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{8} \hspace{4pt}6 \hspace{4pt}\textbf{2} \hspace{4pt}\textbf{1} \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}\Tree [ .1 [ .2 7 ] [ .8 5 ] ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6
+
+\textbf{0-3}\\
+4 array accesses for connected() and 5 for union()\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}\textbf{4} \hspace{4pt}1 \hspace{4pt}1 \hspace{4pt}\textbf{4} \hspace{4pt}\textbf{4} \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}1 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .1 [ .2 7 ] [ .8 5 ] ] \hspace{4pt}\Tree [ .4 3 [ .0 9 ] ] \hspace{4pt}6
+
+\textbf{4-2}\\
+4 array accesses for connected() and 5 for union()\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}4 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{1} \hspace{4pt}4 \hspace{4pt}\textbf{1} \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}1 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .1 [ .2 7 ] [ .8 5 ] [ .4 3 [ .0 9 ] ] ] \hspace{4pt}6
+
+\subparagraph{\large 1.5.3} Same as 1.5.1 but use weighted quick-union\\\\
+
+\textbf{Initial array}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+\textbf{Tree}\\
+0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9
+
+\textbf{9-0}\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{9}\\
+Value: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}\textbf{0}\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8
+
+\textbf{3-4}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{4} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8
+
+\textbf{5-8}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{8} \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\textbf{8} \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{7-2}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}\textbf{2} \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}1 \hspace{4pt}\Tree [ .2 7 ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{2-1}\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}\textbf{2} \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}8 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}\Tree [ .2 7 1 ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6 \hspace{4pt}\Tree [ .8 5 ]
+
+\textbf{5-7}\\
+Index: \hspace{4pt}0 \hspace{4pt}1 \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}4 \hspace{4pt}\textbf{5} \hspace{4pt}6 \hspace{4pt}\textbf{7} \hspace{4pt}\textbf{8} \hspace{4pt}9\\
+Value: \hspace{4pt}0 \hspace{4pt}2 \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}4 \hspace{4pt}\textbf{8} \hspace{4pt}6 \hspace{4pt}\textbf{2} \hspace{4pt}\textbf{2} \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .0 9 ] \hspace{4pt}\Tree [ .2 7 1 [ .8 5 ] ] \hspace{4pt}\Tree [ .4 3 ] \hspace{4pt}6
+
+\textbf{0-3}\\
+Index: \hspace{4pt}\textbf{0} \hspace{4pt}1 \hspace{4pt}2 \hspace{4pt}\textbf{3} \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}\textbf{4} \hspace{4pt}2 \hspace{4pt}2 \hspace{4pt}\textbf{4} \hspace{4pt}\textbf{4} \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}2 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .2 7 1 [ .8 5 ] ] \hspace{4pt}\Tree [ .4 3 [ .0 9 ] ] \hspace{4pt}6
+
+\textbf{4-2}\\
+Index: \hspace{4pt}0 \hspace{4pt}\textbf{1} \hspace{4pt}\textbf{2} \hspace{4pt}3 \hspace{4pt}\textbf{4} \hspace{4pt}5 \hspace{4pt}6 \hspace{4pt}7 \hspace{4pt}8 \hspace{4pt}9\\
+Value: \hspace{4pt}4 \hspace{4pt}\textbf{2} \hspace{4pt}\textbf{2} \hspace{4pt}4 \hspace{4pt}\textbf{1} \hspace{4pt}8 \hspace{4pt}6 \hspace{4pt}2 \hspace{4pt}2 \hspace{4pt}0\\
+\textbf{Tree}\\
+\Tree [ .2 7 1 [ .8 5 ] [ .4 3 [ .0 9 ] ] ] \hspace{4pt}6
+
+\end{document}

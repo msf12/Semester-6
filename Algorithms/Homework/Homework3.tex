@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+\title{Homework 3}
+\date{}
+\maketitle
+
+\paragraph{\Large 1. Question 1.3.6}\mbox{}\\
+What does the following code fragment do to the queue q?
+\begin{lstlisting}[language=Java]
+Stack<String> stack = new Stack<String>();
+while (!q.isEmpty())
+    stack.push(q.dequeue());
+while (!stack.isEmpty())
+    q.enqueue(stack.pop());
+\end{lstlisting}
+
+The code fragment moves the queue of q into stack and then pops the contents of stack in the reverse order back into q, reversing the order of the elements of q.
+
+\paragraph{\Large 2. Question 1.3.3}\mbox{}\\
+Suppose tahat a client performs an intermixed sequence of (stack) \textit{push} and \textit{pop} operations. The push operations put the integers 0 through 9 in order onto the stack; the pop operations print out the return values. Which of the following sequences could \textit{not} occur?\\
+
+\begin{tabular}{c c c c c c c c c c c}
+\textit{a} & 4 & 3 & 2 & 1 & 0 & 9 & 8 & 7 & 6 & 5\\
+\textit{b} & 4 & 6 & 8 & 7 & 5 & 3 & 2 & 9 & 0 & 1\\
+\textit{c} & 2 & 5 & 6 & 7 & 4 & 8 & 9 & 3 & 1 & 0\\
+\textit{d} & 4 & 3 & 2 & 1 & 0 & 5 & 6 & 7 & 8 & 9\\
+\textit{e} & 1 & 2 & 3 & 4 & 5 & 6 & 9 & 8 & 7 & 0\\
+\textit{f} & 0 & 4 & 6 & 5 & 3 & 8 & 1 & 7 & 2 & 9\\
+\textit{g} & 1 & 4 & 7 & 9 & 8 & 6 & 5 & 3 & 0 & 2\\
+\textit{h} & 2 & 1 & 4 & 3 & 6 & 5 & 8 & 7 & 9 & 0
+\end{tabular}\\\\
+
+\noindent b and g are impossible
+
+\paragraph{\Large 3. Question 1.3.22 and 1.3.23}\mbox{}\\
+Suppose that x is a linked list Node. What does the follosing code fragment do?
+\begin{lstlisting}[language=Java]
+t.next = x.next;
+x.next = t;
+\end{lstlisting}
+
+The code fragment places the node t after the node x by setting the node after t to the node that was previously after x and setting the node after x to t.\\
+
+\noindent Why does the following code fragment not do the same thing as in the previous question?
+\begin{lstlisting}[language=Java]
+x.next = t;
+t.next = x.next;
+\end{lstlisting}
+
+The code fragment makes t.next equal to t, splitting x and t from whatever came after x initially. x now points to t which points to itself.
+
+\paragraph{\Large 4. Study Guide Question}\mbox{}\\
+Understand why the we prevent loitering by adding the line A[N] = null in Algorithm 1.1 on page 141 of the book. Why do we not have a special purpose line like this for our linked list implementation (page 149, algorithm 1.2)?\\
+
+When a node has no more references to it in the program the garbage collector is allowed to free the memory regardless of whether or not the node references anything. This is different from an array implementation where the memory is still in use by the array structure until the cell is manually set to null.
+
+\end{document}

@@ -1,0 +1,12 @@
+import java.nio.file.Path;
+import java.util.Scanner;
+
+
+public class Scheduler {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Path p = new Path();
+	}
+
+}

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+
+public class Scheduler {
+
+	public static void main(String[] args) {
+		assert(args.length > 0, "Invalid input");
+		Scanner scan = new Scanner(System.in);
+		
+	}
+
+}
