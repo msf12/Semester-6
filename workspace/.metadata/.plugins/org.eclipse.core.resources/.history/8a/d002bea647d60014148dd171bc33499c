@@ -1,0 +1,36 @@
+
+public class Task1 {
+
+	
+	/* a[0] for water, a[1] for ice, a[2] for cup */
+	semaphore[] a = new semaphore[3]{0,0,0};
+	semaphore server = 1;
+	Server(void) {
+	    int i,j;
+	    While(TRUE){
+	        i = random(3); /* returns a random integer 0, 1 or 2 for i */
+	        j = random(3); /* returns a random integer 0, 1 or 2 for j */
+	        if (i != j) { /* i and j must be different */
+	            Wait(server);
+	            k = 3 - (i+j); /*the drinker with the k-th ingredient
+	                                is identified*/
+	            Signal(a[k]);
+	        }
+	    }//end of while
+	}//end of Server
+
+	Drinker(int r) {
+	    /* r indicates which ingredients this drinker has */
+	    While(TRUE){
+	        Wait(a[i]);
+	        Drink( );
+	        Signal(server);
+	    }
+	}//end of Drinker
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
