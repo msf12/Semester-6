@@ -1,0 +1,9 @@
+
+public class Task2 {
+
+	public class Dentist implements Runnable {
+		
+	}
+	
+	
+}
