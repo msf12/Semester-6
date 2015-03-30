@@ -172,10 +172,13 @@
 	"buffers":
 	[
 		{
+			"contents": "users\npasswords\nthreads\nposts\ntime posted\nunique post-specific ID (for easy linking)\n\n\n\nuser -> passwd, description\n\nuser, time posted -> thread, post\n\npost -> PSID, post-text, user, thread\n\nthread -> title, initial post\n\n\n\nuser :has_one passwd\n\nuser :has_many PSID\n\nuser :has_many post, :through PSID\n\nuser :has_many thread, :through post\n\nuser :has_one post-count\n\n\nthread :has_many post\n\nthread :has_one time (initial time created)\n\nthread :has_one post-count\n\n\npost :has_one time\n\npost :has_one user\n\npost :has_one PSID\n\npost :has_one thread",
 			"file": "FinalProjectTable.txt",
+			"file_size": 543,
+			"file_write_time": 130722029072353819,
 			"settings":
 			{
-				"buffer_size": 84,
+				"buffer_size": 545,
 				"line_ending": "Unix",
 				"name": "users"
 			}
@@ -254,6 +257,7 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/.cache/.fr-kqALvq/FullScreenMario-master/index.html",
 		"/home/mitchel/Documents/Div 2/Semester 6/Database Driven Websites/Homework.txt",
 		"/home/mitchel/Documents/Div 2/Semester 6/Database Driven Websites/hw1.rb",
 		"/home/mitchel/Downloads/hello_world.rb",
@@ -370,15 +374,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 84,
+						"buffer_size": 545,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								368,
+								368
 							]
 						],
 						"settings":
@@ -459,7 +463,7 @@
 		[
 			[
 				"",
-				"~/Documents/Div 2/Semester 6/Database Driven Websites/Database-Driven-Websites.sublime-project"
+				"~/Documents/Division-2/Semester-6/Operating Systems/Operating-Systems.sublime-project"
 			]
 		],
 		"width": 380.0

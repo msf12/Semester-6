@@ -6,7 +6,7 @@ public class Task1 {
 
 
 	/* a[0] for water, a[1] for ice, a[2] for cup */
-	Semaphore[] a = new Semaphore[]{new Semaphore(0),new Semaphore(0),new Semaphore(0)};
+	Semaphore[] a = new Semaphore[\]{new Semaphore(0),new Semaphore(0),new Semaphore(0)};
 	Semaphore server = new Semaphore(1);
 	Random random = new Random();
 

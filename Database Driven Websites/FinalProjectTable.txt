@@ -11,7 +11,11 @@ user -> passwd, description
 
 user, time posted -> thread, post
 
-PSID -> post
+post -> PSID, post-text, user, thread
+
+thread -> title, initial post
+
+
 
 user :has_one passwd
 
