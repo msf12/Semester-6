@@ -1,0 +1,38 @@
+users
+passwords
+threads
+posts
+time posted
+unique post-specific ID (for easy linking)
+
+
+
+user -> passwd, description
+
+user, time posted -> thread, post
+
+PSID -> post
+
+user :has_one passwd
+
+user :has_many PSID
+
+user :has_many post, :through PSID
+
+user :has_many thread, :through post
+
+user :has_one post-count
+
+thread :has_many post
+
+thread :has_one time (initial time created)
+
+thread :has_one post-count
+
+post :has_one time
+
+post :has_one user
+
+post :has_one PSID
+
+post :has_one thread

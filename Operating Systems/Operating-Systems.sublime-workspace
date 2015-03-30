@@ -136,18 +136,26 @@
 	"buffers":
 	[
 		{
-			"file": "ProgrammingAssignments/Assignment1/pa1.tex",
+			"contents": "\\documentclass{article}\n\n\\begin{document}\n\n\\title{Programming Assignment 2}\n\\author{Mitchel Fields}\n\\date{}\n\\maketitle\n\n\\paragraph{1. Thirsty Threads}\\mbox{}\\\\\n\n\\begin{verbatim}\n/* a[0] for water, a[1] for ice, a[2] for cup */\nsemaphore a[3] = 0;\nsemaphore server = 1;\nServer(void) {\n    int i,j;\n    While(TRUE){\n        i = random(3); /*x returns a random integer 0, 1 or 2 for i */\n        j = random(3); /* returns a random integer 0, 1 or 2 for j */\n        if (i != j) { /* i and j must be different */\n            Wait(server);\n            k = 3 - (i+j); /*the drinker with the k-th ingredient\n                                is identified*/\n            Signal(a[k]);\n        }\n    }//end of while\n}//end of Server\n\nDrinker(int r) {\n    /* r indicates which ingredients this drinker has */\n    While(TRUE){\n        Wait(a[i]);\n        Drink( );\n        Signal(server);\n    }\n}//end of Drinker\n\\end{verbatim}\n\n\\paragraph{2. RR}\\mbox{}\\\\\n\n\\end{document}\n",
+			"file": "ProgrammingAssignments/Assignment2/pa2.tex",
+			"file_size": 958,
+			"file_write_time": 130721297850295645,
 			"settings":
 			{
-				"buffer_size": 931,
+				"buffer_size": 959,
 				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -210,13 +218,10 @@
 	},
 	"expanded_folders":
 	[
-		"/home/mitchel/Documents/Div 2/Semester 6/Operating Systems",
-		"/home/mitchel/Documents/Div 2/Semester 6/Operating Systems/Homework",
-		"/home/mitchel/Documents/Div 2/Semester 6/Operating Systems/ProgrammingAssignments",
-		"/home/mitchel/Documents/Div 2/Semester 6/Operating Systems/ProgrammingAssignments/Assignment1",
-		"/home/mitchel/Documents/Div 2/Semester 6/workspace",
-		"/home/mitchel/Documents/Div 2/Semester 6/workspace/OSAssignment1",
-		"/home/mitchel/Documents/Div 2/Semester 6/workspace/OSAssignment1/src"
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2",
+		"/home/mitchel/Documents/Div 2/Semester 6/workspace"
 	],
 	"file_history":
 	[
@@ -296,7 +301,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -364,24 +369,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "ProgrammingAssignments/Assignment1/pa1.tex",
-					"semi_transient": true,
+					"file": "ProgrammingAssignments/Assignment2/pa2.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 931,
+						"buffer_size": 959,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								600,
-								596
+								340,
+								340
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -395,7 +402,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -432,15 +439,17 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "Operating-Systems.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -449,6 +458,7 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -461,6 +471,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
