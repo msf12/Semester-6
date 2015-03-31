@@ -1,0 +1,30 @@
+
+public class Task3 {
+
+	public class Espionage {
+		
+		private String message;
+		
+		public synchronized void dropSpyMsg(String msg) throws InterruptedException
+		{
+			while(message != null)
+				wait();
+			message = msg;
+			notify();
+		}
+		
+		public synchronized String agentPickMsg() throws InterruptedException
+		{
+			while(message == null)
+				wait();
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
