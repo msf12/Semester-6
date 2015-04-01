@@ -5,24 +5,24 @@ public class Task3 {
 
 	public class Espionage {
 
-		private String message; //the current message being passed
+		private String message;
 
 		public synchronized void dropSpyMsg(String msg) throws InterruptedException
 		{
-			while(message != null) //spies wait until the previous message has been picked up
+			while(message != null)
 				wait();
-			message = msg; //place the new message
-			notify(); //notify the waiting agent
+			message = msg;
+			notify();
 		}
 
 		public synchronized String agentPickMsg() throws InterruptedException
 		{
-			while(message == null) //agents wait until there is a message to pick up
+			while(message == null)
 				wait();
-			String returnString = message; //save the message information
-			message = null; //clear the message
-			notifyAll(); //notify waiting spies that they can now leave messages
-			return returnString; //return the message
+			String returnString = message;
+			message = null;
+			notifyAll();
+			return returnString;
 		}
 
 

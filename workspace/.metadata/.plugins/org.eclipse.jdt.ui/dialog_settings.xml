@@ -20,15 +20,15 @@
 	<section name="BuildPathsPropertyPage">
 		<item value="2" key="pageIndex"/>
 	</section>
-	<section name="NewClassWizardPage">
-		<item value="false" key="create_constructor"/>
-		<item value="true" key="create_unimplemented"/>
-	</section>
-	<section name="quick_assist_proposal_size">
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
-	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_unimplemented"/>
 	</section>
 	<section name="javadoc">
 		<item value="false" key="nodeprecatedlist"/>
@@ -55,8 +55,8 @@
 	<section name="JavadocWizardDialog">
 		<item value="702" key="DIALOG_WIDTH"/>
 		<item value="61" key="DIALOG_Y_ORIGIN"/>
-		<item value="450" key="DIALOG_X_ORIGIN"/>
 		<item value="566" key="DIALOG_HEIGHT"/>
+		<item value="450" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

@@ -1,0 +1,8 @@
+Mitchel Fields
+
+To run (where # = the number of the task):
+$ javac Task#.java
+$ java Task#
+
+Used classes in order to more easily facilitate creating individual threads
+Testing prints left in to illustrate that the code functions properly
