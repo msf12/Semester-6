@@ -136,14 +136,12 @@
 	"buffers":
 	[
 		{
-			"contents": "\\documentclass{article}\n\n\\begin{document}\n\n\\title{Programming Assignment 2}\n\\author{Mitchel Fields}\n\\date{}\n\\maketitle\n\n\\paragraph{1. Thirsty Threads}\\mbox{}\\\\\n\n\\begin{verbatim}\n/* a[0] for water, a[1] for ice, a[2] for cup */\nsemaphore a[3] = 0;\nsemaphore server = 1;\nServer(void) {\n    int i,j;\n    While(TRUE){\n        i = random(3); /*x returns a random integer 0, 1 or 2 for i */\n        j = random(3); /* returns a random integer 0, 1 or 2 for j */\n        if (i != j) { /* i and j must be different */\n            Wait(server);\n            k = 3 - (i+j); /*the drinker with the k-th ingredient\n                                is identified*/\n            Signal(a[k]);\n        }\n    }//end of while\n}//end of Server\n\nDrinker(int r) {\n    /* r indicates which ingredients this drinker has */\n    While(TRUE){\n        Wait(a[i]);\n        Drink( );\n        Signal(server);\n    }\n}//end of Drinker\n\\end{verbatim}\n\n\\paragraph{2. RR}\\mbox{}\\\\\n\n\\end{document}\n",
-			"file": "ProgrammingAssignments/Assignment2/pa2.tex",
-			"file_size": 958,
-			"file_write_time": 130721297850295645,
+			"file": "Homework/hw3.tex",
 			"settings":
 			{
-				"buffer_size": 959,
-				"line_ending": "Unix"
+				"buffer_size": 3676,
+				"line_ending": "Unix",
+				"name": "Homework 3"
 			}
 		}
 	],
@@ -225,6 +223,10 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2/README",
+		"/home/mitchel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2/pa2.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment1/README",
 		"/home/mitchel/Documents/Div 2/Semester 6/Operating Systems/Homework/hw2.tex",
 		"/home/mitchel/http",
 		"/home/mitchel/Documents/Div 2/Semester 6/workspace/Assignment3/src/test.txt",
@@ -252,7 +254,6 @@
 		"/home/mitchel/Desktop/lab2/LabActivities.tex",
 		"/home/mitchel/Desktop/lab2/labactivity4.txt",
 		"/home/mitchel/Documents/Div 2/Algorithms/Homework/Homework3.tex",
-		"/home/mitchel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/mitchel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mitchel/Documents/Div 2/Algorithms/Homework/Homework2.tex",
 		"/home/mitchel/Documents/Div 2/Operating Systems/lab1Reflections.txt",
@@ -369,26 +370,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "ProgrammingAssignments/Assignment2/pa2.tex",
+					"file": "Homework/hw3.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 959,
+						"buffer_size": 3676,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								340,
-								340
+								2908,
+								2908
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "Homework 3",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
