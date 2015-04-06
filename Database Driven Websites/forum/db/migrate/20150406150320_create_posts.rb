@@ -3,7 +3,6 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :text
       t.datetime :time
-      t.integer :ID
 
       t.timestamps null: false
     end

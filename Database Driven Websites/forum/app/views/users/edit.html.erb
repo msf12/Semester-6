@@ -1,0 +1,39 @@
+<h1>We's gonna change da thing</h1>
+
+<%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@user.errors.count, "error") %> prohibited
+				this user from being saved:
+			</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<strong>Username:</strong>
+		<%= @user.username %>
+	</p>
+
+	<p>
+		<%= f.label :Password %><br>
+		<%= f.text_field :password %>
+	</p>
+
+	<p>
+		<%= f.label :Description %><br>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+
+<%= link_to "Back", :controller => "users" %>
