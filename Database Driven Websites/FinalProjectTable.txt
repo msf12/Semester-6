@@ -27,11 +27,15 @@ user :has_many thread, :through post
 
 user :has_one post-count
 
+
 thread :has_many post
 
 thread :has_one time (initial time created)
 
+thread title:string
+
 thread :has_one post-count
+
 
 post :has_one time
 
