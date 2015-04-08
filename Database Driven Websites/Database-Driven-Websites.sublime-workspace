@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"user_params"
+			],
+			[
+				"v",
+				"vp	validates_presence_of"
+			],
+			[
+				"l",
+				"lic	link_to (controller)"
+			],
+			[
+				"li",
+				"lip	link_to (path)"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"do",
+				"dob	Insert do |variable| … end"
+			],
+			[
 				"un",
 				"unless	unless … end"
 			],
@@ -171,39 +195,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "FinalProjectTable.txt",
-			"settings":
-			{
-				"buffer_size": 566,
-				"line_ending": "Unix",
-				"name": "users"
-			}
-		},
-		{
-			"file": "forum/app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 71,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "forum/app/models/forum_thread.rb",
-			"settings":
-			{
-				"buffer_size": 75,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "forum/app/models/post.rb",
-			"settings":
-			{
-				"buffer_size": 68,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -277,13 +268,31 @@
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models"
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/welcome",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/post.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/forum_thread.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/config/routes.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/index.html.erb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/users_controller.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/user.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/show.html.erb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/new.html.erb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/edit.html.erb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/welcome/index.html.erb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150406150320_create_posts.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150406150805_create_forum_threads.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/FinalProjectTable.txt",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/test/test_helper.rb",
 		"/home/mitchel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/mitchel/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150406150320_create_posts.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150406145410_create_users.rb",
 		"/home/mitchel/.cache/.fr-kqALvq/FullScreenMario-master/index.html",
 		"/home/mitchel/Documents/Div 2/Semester 6/Database Driven Websites/Homework.txt",
@@ -349,6 +358,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"article",
+			"user",
+			"article",
+			"user",
+			"article",
 			"crtl+tab",
 			"== nil",
 			"end",
@@ -392,122 +406,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "FinalProjectTable.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 566,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								524,
-								524
-							]
-						],
-						"settings":
-						{
-							"auto_name": "users",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "forum/app/models/user.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 71,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								66,
-								66
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "forum/app/models/forum_thread.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 75,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								53
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "forum/app/models/post.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 68,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
