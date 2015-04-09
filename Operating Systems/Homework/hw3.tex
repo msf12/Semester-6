@@ -9,48 +9,35 @@
 
 \begin{enumerate}
 
-\item Consider a system with four active processes: P1, P2, P3, P4. Each of these processes require two types of resources, tape-drives and printers, for execution. Current allocation, and maximum demand of the processes is shown in the following table. In addition to the currently allocated instances, both the tape drive resource and printer resource have one unit each available (as shown in the table). Given this state of the system, determine whether the system is in a safe or unsafe state? If safe, state the safe sequence of process execution. If unsafe, explain why. (10)
-
-
+\item It is safe if the processes continue in the order P2, P3, P4, P1.
 
 \item Fragmentation:
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-\item Does paging help with internal fragmentation? If yes, how; if no, why not? (5)
+\item No. On average 1/2 a page is wasted for every process, causing internal fragmentation.
 
-No. On average 1/2 a page is wasted for every process, causing internal fragmentation.
-
-\item Does paging help with external fragmentation? If yes, how; if no, why not? (5)
-
-Yes. Pages are of finite predetermined size so programs are allocated consistent amounts of space, eliminating external fragmentation.
+\item Yes. Pages are of finite predetermined size so programs are allocated consistent amounts of space, eliminating external fragmentation.
 \end{enumerate}
 
-\item Why do we need to use virtual addresses (in addition to physical addresses) in paging systems? (5)
+\item To allow translation from program internal addresses (i.e. text line 26) to physical memory addresses (page number + offset)
 
-To allow translation from program internal addresses (i.e. text line 26) to physical memory addresses (page number + offset)
+\item TLB (translation lookaside buffer). The TLB contains the page to frame mapping of the most frequently accessed pages to improve performance when reaccessing those pages.
 
-\item What hardware is used by most paging systems to improve the performance of address translation in paging systems? Why do we need this hardware? (5 + 5)
-
-TLB (translation lookaside buffer)
-
-\item Consider a system with 32 B pages/frames and a total memory size of 512 B. Assume it is a typical 32-bit system and thus can access memory with 4-byte (word level) granularity. This means that memory can only be addressed at word level granularity--thus an offset of 0 within a page implies the first word (e.g. bytes 0 to 3) of the page, while an offset of 1 refers to the second word (bytes 4-7). As a result, the 512 B of memory only needs addresses for 128 words (512/4).
+\item 
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-\item In each virtual address on this system, how many bits are needed for the page number (p) and how many for the offset (d)? (5) 
+\item 4 for page and 2 for offset
 
-4 for page and 2 for offset
+\item $31 \rightarrow p = 0, d = 32 \rightarrow p1 = f3 \rightarrow (3*32)-1+32 = (4*32)-1 = 127$
 
-\item Use the above information and the following page table to translate virtual address \"31\" to a physical address. Show the following: values of “p” and “d,” the frame number corresponding to “p,” the fully translated address. (10) 
-
-31
 \end{enumerate}
 
 \item Segmented Paging:
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-\item What is segmented paging? (3) 
-\item List two benefits of segmented paging. (4) 
-\item Give at least one drawback of segmented paging. (3) 
+\item Virtual addresses are split into variably sized segments which are then mapped to locations in constant size pages throughout system memory.
+\item Two levels of code sharing: at the page and segment level. Easy to allocate memory of various sizes.
+\item More resource consuming to map a virtual address to a physical one through multiple tables.
 \end{enumerate}
 
 
@@ -58,14 +45,11 @@ TLB (translation lookaside buffer)
 \item Spatial and Temporal Locality
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-\item What is temporal locality of reference? (3)
-\item What is spatial locality of reference? (3)
-\item How does locality of reference impact systems that swap pages to the disk? (4)
+\item Temporal locality of reference is the idea that recently accessed information will likely be accessed in the future.
+\item Spatial locality of reference is the idea that information near recently accessed information is likely to be accessed in the future.
+\item Locality of reference helps guide what information is most crucial to store in memory and cache space based on reasonable predictions of how likely it is to be accessed in the near future based on whether it was recently accessed and whether currently processed information is close to it spatially in the process's virtual memory.
 \end{enumerate}
 
-
-
-\item Consider a system with three memory frames (F1, F2, and F3); each frame can hold a single virtual page (A, B, C, D, or E). How would the FIFO, LRU, and MIN page replacement schemes would handle the following page reference stream (shown in the tables below). Fill in how the frames are mapped for the following reference stream, and report the number of page hits for each algorithm. (30)
 
 \end{enumerate}
 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"address",
+				"addresses"
+			],
+			[
 				"be",
 				"begin	\\begin{}…\\end{}"
 			],
@@ -139,7 +143,7 @@
 			"file": "Homework/hw3.tex",
 			"settings":
 			{
-				"buffer_size": 3564,
+				"buffer_size": 1977,
 				"line_ending": "Unix",
 				"name": "Homework 3"
 			}
@@ -235,6 +239,8 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Downloads/Makefile",
+		"/home/mitchel/Downloads/Makefile (1)",
 		"/home/mitchel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2/README",
 		"/home/mitchel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
@@ -387,15 +393,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3564,
+						"buffer_size": 1977,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								967,
-								967
+								202,
+								202
 							]
 						],
 						"settings":
@@ -404,7 +410,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
