@@ -195,6 +195,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "forum/app/views/users/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "forum/app/views/users/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 736,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -271,20 +287,21 @@
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/welcome",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate"
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/welcome"
 	],
 	"file_history":
 	[
+		"/home/mitchel/.config/synapse/config.json",
+		"/home/mitchel/Desktop/crash.log",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/users_controller.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/new.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/post.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/forum_thread.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/config/routes.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/index.html.erb",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/users_controller.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/user.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/show.html.erb",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/new.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/edit.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/welcome/index.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150406150320_create_posts.rb",
@@ -406,8 +423,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "forum/app/views/users/new.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "forum/app/views/users/edit.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

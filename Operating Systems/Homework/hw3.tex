@@ -1,57 +1,72 @@
-Homework 3
-Due: April 9th, 2015
-Name:			Smith ID:
-Submission Instructions
-Please type your answers to the following questions and submit the PDF on Aurora/Beowulf. The instructions to submit on Aurora/Beowulf can be found on Moodle.  To submit please use submit hw3 myhw.pdf
+\documentclass{article}
 
-This homework is to be done individually; you can discuss the questions with your classmates, but you should write your answers individually.
+\begin{document}
 
-Important: As stated on the course Moodle page, submission of all assessment for this course implies strict adherence to the Smith Honor Code. Any form of plagiarism will have severe consequences. 
+\title{Homework 3}
+\author{Mitchel Fields}
+\date{4/9/15}
+\maketitle
 
-1. Consider a system with four active processes: P1, P2, P3, P4. Each of these processes require two types of resources, tape-drives and printers, for execution. Current allocation, and maximum demand of the processes is shown in the following table. In addition to the currently allocated instances, both the tape drive resource and printer resource have one unit each available (as shown in the table). Given this state of the system, determine whether the system is in a safe or unsafe state? If safe, state the safe sequence of process execution. If unsafe, explain why. (10)
+\begin{enumerate}
+
+\item Consider a system with four active processes: P1, P2, P3, P4. Each of these processes require two types of resources, tape-drives and printers, for execution. Current allocation, and maximum demand of the processes is shown in the following table. In addition to the currently allocated instances, both the tape drive resource and printer resource have one unit each available (as shown in the table). Given this state of the system, determine whether the system is in a safe or unsafe state? If safe, state the safe sequence of process execution. If unsafe, explain why. (10)
 
 
 
-2. Fragmentation:
-a. Does paging help with internal fragmentation? If yes, how; if no, why not? (5)
+\item Fragmentation:
+\begin{enumerate}
+\renewcommand{\theenumi}{\Alph{enumi}}
+\item Does paging help with internal fragmentation? If yes, how; if no, why not? (5)
 
 No. On average 1/2 a page is wasted for every process, causing internal fragmentation.
 
-b. Does paging help with external fragmentation? If yes, how; if no, why not? (5)
+\item Does paging help with external fragmentation? If yes, how; if no, why not? (5)
 
 Yes. Pages are of finite predetermined size so programs are allocated consistent amounts of space, eliminating external fragmentation.
+\end{enumerate}
 
-3. Why do we need to use virtual addresses (in addition to physical addresses) in paging systems? (5)
+\item Why do we need to use virtual addresses (in addition to physical addresses) in paging systems? (5)
 
 To allow translation from program internal addresses (i.e. text line 26) to physical memory addresses (page number + offset)
 
-4. What hardware is used by most paging systems to improve the performance of address translation in paging systems? Why do we need this hardware? (5 + 5)
+\item What hardware is used by most paging systems to improve the performance of address translation in paging systems? Why do we need this hardware? (5 + 5)
 
 TLB (translation lookaside buffer)
 
-5. Consider a system with 32 B pages/frames and a total memory size of 512 B. Assume it is a typical 32-bit system and thus can access memory with 4-byte (word level) granularity. This means that memory can only be addressed at word level granularity--thus an offset of 0 within a page implies the first word (e.g. bytes 0 to 3) of the page, while an offset of 1 refers to the second word (bytes 4-7). As a result, the 512 B of memory only needs addresses for 128 words (512/4).
-a. In each virtual address on this system, how many bits are needed for the page number (p) and how many for the offset (d)? (5) 
+\item Consider a system with 32 B pages/frames and a total memory size of 512 B. Assume it is a typical 32-bit system and thus can access memory with 4-byte (word level) granularity. This means that memory can only be addressed at word level granularity--thus an offset of 0 within a page implies the first word (e.g. bytes 0 to 3) of the page, while an offset of 1 refers to the second word (bytes 4-7). As a result, the 512 B of memory only needs addresses for 128 words (512/4).
+\begin{enumerate}
+\renewcommand{\theenumi}{\Alph{enumi}}
+\item In each virtual address on this system, how many bits are needed for the page number (p) and how many for the offset (d)? (5) 
 
 4 for page and 2 for offset
 
-b. Use the above information and the following page table to translate virtual address \"31\" to a physical address. Show the following: values of “p” and “d,” the frame number corresponding to “p,” the fully translated address. (10) 
+\item Use the above information and the following page table to translate virtual address \"31\" to a physical address. Show the following: values of “p” and “d,” the frame number corresponding to “p,” the fully translated address. (10) 
 
-31/
+31
+\end{enumerate}
 
-6. Segmented Paging:
-a. What is segmented paging? (3) 
-b. List two benefits of segmented paging. (4) 
-c. Give at least one drawback of segmented paging. (3) 
-
-
-
-7. Spatial and Temporal Locality
-a. What is temporal locality of reference? (3)
-b. What is spatial locality of reference? (3)
-c. How does locality of reference impact systems that swap pages to the disk? (4)
+\item Segmented Paging:
+\begin{enumerate}
+\renewcommand{\theenumi}{\Alph{enumi}}
+\item What is segmented paging? (3) 
+\item List two benefits of segmented paging. (4) 
+\item Give at least one drawback of segmented paging. (3) 
+\end{enumerate}
 
 
 
-8. Consider a system with three memory frames (F1, F2, and F3); each frame can hold a single virtual page (A, B, C, D, or E). How would the FIFO, LRU, and MIN page replacement schemes would handle the following page reference stream (shown in the tables below). Fill in how the frames are mapped for the following reference stream, and report the number of page hits for each algorithm. (30)
+\item Spatial and Temporal Locality
+\begin{enumerate}
+\renewcommand{\theenumi}{\Alph{enumi}}
+\item What is temporal locality of reference? (3)
+\item What is spatial locality of reference? (3)
+\item How does locality of reference impact systems that swap pages to the disk? (4)
+\end{enumerate}
 
 
+
+\item Consider a system with three memory frames (F1, F2, and F3); each frame can hold a single virtual page (A, B, C, D, or E). How would the FIFO, LRU, and MIN page replacement schemes would handle the following page reference stream (shown in the tables below). Fill in how the frames are mapped for the following reference stream, and report the number of page hits for each algorithm. (30)
+
+\end{enumerate}
+
+\end{document}

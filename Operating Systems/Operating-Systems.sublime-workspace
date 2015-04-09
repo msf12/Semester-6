@@ -139,7 +139,7 @@
 			"file": "Homework/hw3.tex",
 			"settings":
 			{
-				"buffer_size": 3676,
+				"buffer_size": 3564,
 				"line_ending": "Unix",
 				"name": "Homework 3"
 			}
@@ -153,9 +153,25 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "pack",
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
 			[
 				"insta",
 				"Colorsublime: Install Theme"
@@ -187,10 +203,6 @@
 			[
 				"Package Control: install",
 				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ",
-				"Package Control: Install Package"
 			]
 		],
 		"width": 449.0
@@ -200,6 +212,7 @@
 		"height": 139.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
 			"build",
 			"ls",
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
@@ -217,12 +230,12 @@
 	"expanded_folders":
 	[
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems",
-		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments",
-		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework",
 		"/home/mitchel/Documents/Div 2/Semester 6/workspace"
 	],
 	"file_history":
 	[
+		"/home/mitchel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2/README",
 		"/home/mitchel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment2/pa2.tex",
@@ -254,7 +267,6 @@
 		"/home/mitchel/Desktop/lab2/LabActivities.tex",
 		"/home/mitchel/Desktop/lab2/labactivity4.txt",
 		"/home/mitchel/Documents/Div 2/Algorithms/Homework/Homework3.tex",
-		"/home/mitchel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mitchel/Documents/Div 2/Algorithms/Homework/Homework2.tex",
 		"/home/mitchel/Documents/Div 2/Operating Systems/lab1Reflections.txt",
 		"/home/mitchel/Documents/Div 2/Algorithms/algs4/WeightedQuickUnionUF.java",
@@ -317,6 +329,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" \n",
 			"-|",
 			"identify",
 			"init",
@@ -374,15 +387,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3676,
+						"buffer_size": 3564,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1218,
-								1218
+								967,
+								967
 							]
 						],
 						"settings":
