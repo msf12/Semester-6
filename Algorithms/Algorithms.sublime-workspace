@@ -152,18 +152,23 @@
 	"buffers":
 	[
 		{
-			"file": "Homework/Homework10.tex",
+			"file": "Homework/Homework11.tex",
 			"settings":
 			{
-				"buffer_size": 2394,
+				"buffer_size": 1277,
 				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -226,11 +231,18 @@
 	},
 	"expanded_folders":
 	[
-		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms",
-		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/Homework"
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework8.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework5.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework4.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework3.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework2.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework6.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework10.tex",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/Homework/Homework8.tex",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/algs4/BST.java",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/algs4/RectHV.java",
@@ -305,13 +317,14 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework",
 			"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/Homework",
 			"/home/mitchel/Documents/Division_2/Semester_5/Microprocessors"
 		]
@@ -321,6 +334,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\d, \\d",
+			"][",
+			"\\w\\n\\d",
+			"listings",
 			"[^(Large|%)] \\d\\.",
 			"[^(Large|%)]\\d\\.",
 			", Question",
@@ -386,19 +403,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Homework/Homework10.tex",
+					"file": "Homework/Homework11.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2394,
+						"buffer_size": 1277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2358,
-								2358
+								1239,
+								1239
 							]
 						],
 						"settings":
@@ -406,7 +423,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -454,6 +471,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "Algorithms.sublime-project",
 	"replace":
 	{
@@ -463,6 +481,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -471,6 +490,7 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -483,6 +503,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],

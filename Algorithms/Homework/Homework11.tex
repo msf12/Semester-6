@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{listings}
+
+\begin{document}
+\title{Homework 11}
+\date{}
+\maketitle
+
+% 1. Textbook 3.4.5
+% 2. Fall 2010 Midterm, #5, Fall 2012 Midterm, #6a
+
+\paragraph{\Large 1. Question 3.4.5}\mbox{}\\
+Is the following implementation of hashcode() legal?
+\begin{lstlisting}[language=Java]
+public int hashcode()
+{ return 17; }
+\end{lstlisting}
+
+This implementation of hashcode is a legal implementation. It maps objects to an integer value. However, it is a very poor implementation as it maps every object to the same integer, meaning that the hashed objects will not be uniformly spread.
+
+\paragraph{\Large 2. One of the following: Fall 2010 Midterm Question 5 or Fall 2012 Midterm Question 6a}\mbox{}\\
+Suppose that the following keys are inserted in the order\\
+A B C D E F G\\
+into an initially empty linear-probing hash table of size 7, using the following hash function:\\\\
+\begin{tabular}{c | c}
+
+key & hash(key, 7)\\ \hline
+A & 3 \\
+B & 1 \\
+C & 4 \\
+D & 1 \\
+E & 5 \\
+F & 2 \\
+G & 5 \\
+\end{tabular}\\\\
+What is the result of the linear-probing array? Assume that the array size is fixed and does not double.\\
+
+\begin{tabular}{c | c | c | c | c | c | c }
+0 & 1 & 2 & 3 & 4 & 5 & 6\\ \hline
+G & B & D & A & C & E & F
+\end{tabular}
+
+\end{document}

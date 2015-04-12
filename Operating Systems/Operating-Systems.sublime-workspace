@@ -143,7 +143,7 @@
 			"file": "Homework/hw3.tex",
 			"settings":
 			{
-				"buffer_size": 1977,
+				"buffer_size": 2253,
 				"line_ending": "Unix",
 				"name": "Homework 3"
 			}
@@ -393,15 +393,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1977,
+						"buffer_size": 2253,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								202,
-								202
+								1508,
+								1508
 							]
 						],
 						"settings":
@@ -410,7 +410,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 165.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
