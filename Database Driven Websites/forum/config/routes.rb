@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'threads/new'
+
+  get 'threads/index'
+
+  get 'threads/show'
+
+  get 'threads/new'
+
+  get 'threads/index'
+
+  get 'threads/show'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -17,7 +29,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :posts
   end
-  resources :threads do
+  resources :forum_threads do
     resources :posts
   end
 

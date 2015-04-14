@@ -1,4 +1,5 @@
 class ForumThread < ActiveRecord::Base
-	has_one :user
-	has_many :posts
+	validates :title, :presence => true
+	
+	belongs_to :user
 end

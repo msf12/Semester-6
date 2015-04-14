@@ -1,0 +1,19 @@
+<h1>Look at da threads!</h1>
+
+<%= link_to "New thread", new_forum_thread_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+
+  <% @forumthreads.each do |thread| %>
+  <tr>
+    <td><%= thread.title %></td>
+    <td><%= thread.user %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Main Menu", :controller => "welcome" %>

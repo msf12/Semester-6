@@ -11,28 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406150805) do
+ActiveRecord::Schema.define(version: 20150413211830) do
 
   create_table "forum_threads", force: :cascade do |t|
     t.string   "title"
-    t.integer  "post_count"
-    t.datetime "creation_time"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "text"
-    t.datetime "time"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "forum_threads", ["user_id"], name: "index_forum_threads_on_user_id"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "contents"
+    t.integer  "user_id"
+    t.integer  "forum_thread_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "posts", ["forum_thread_id"], name: "index_posts_on_forum_thread_id"
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password"
     t.string   "description"
-    t.integer  "postcount"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

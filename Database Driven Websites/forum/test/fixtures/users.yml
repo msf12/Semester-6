@@ -4,10 +4,8 @@ one:
   username: MyString
   password: MyString
   description: MyString
-  postcount: 1
 
 two:
   username: MyString
   password: MyString
   description: MyString
-  postcount: 1

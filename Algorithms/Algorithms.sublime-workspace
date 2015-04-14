@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"8B",
+				"8B"
+			],
+			[
 				"it",
 				"itd	\\item[description]"
 			],
@@ -151,14 +155,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Homework/Homework11.tex",
-			"settings":
-			{
-				"buffer_size": 1277,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -236,6 +232,9 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/threads_controller.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Midterm/MidtermAnswers.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework11.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework8.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework5.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework4.tex",
@@ -334,6 +333,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\n\\w\\w\\w\\w\\n",
+			"b",
 			"\\d, \\d",
 			"][",
 			"\\w\\n\\d",
@@ -398,37 +399,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Homework/Homework11.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1239,
-								1239
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -495,7 +467,7 @@
 		[
 			[
 				"",
-				"~/Documents/Div 2/Semester 6/Operating Systems/Operating-Systems.sublime-project"
+				"~/Documents/Division-2/Semester-6/Database Driven Websites/Database-Driven-Websites.sublime-project"
 			]
 		],
 		"width": 380.0

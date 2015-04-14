@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
-	has_one :user
-	has_one :thread
+  belongs_to :user
+  belongs_to :forum_thread
 end
