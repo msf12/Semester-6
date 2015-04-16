@@ -155,6 +155,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Homework/Homework12.tex",
+			"settings":
+			{
+				"buffer_size": 892,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -232,6 +240,7 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Downloads/memTemplate.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/threads_controller.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Midterm/MidtermAnswers.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework11.tex",
@@ -399,8 +408,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Homework/Homework12.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								876,
+								876
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -467,7 +505,7 @@
 		[
 			[
 				"",
-				"~/Documents/Division-2/Semester-6/Database Driven Websites/Database-Driven-Websites.sublime-project"
+				"~/Documents/Division-2/Semester-6/Operating Systems/Operating-Systems.sublime-project"
 			]
 		],
 		"width": 380.0
