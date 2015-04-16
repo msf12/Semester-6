@@ -13,8 +13,6 @@ public class MemoryManager {
 			SegmentedMM manager = new SegmentedMM();
 		else if(policy == 1)
 			PagedMM manager = new PagedMM();
-		else
-			return;
 			
 	}
 

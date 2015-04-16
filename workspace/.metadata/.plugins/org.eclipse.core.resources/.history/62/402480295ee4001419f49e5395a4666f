@@ -11,11 +11,6 @@ public class MemoryManager {
 		// Use segmentation if policy==0, paging if policy==1 
 		if(policy == 0)
 			SegmentedMM manager = new SegmentedMM();
-		else if(policy == 1)
-			PagedMM manager = new PagedMM();
-		else
-			return;
-			
 	}
 
 	public int allocate(int bytes, int pid, int text_size, int data_size, int heap_size)
