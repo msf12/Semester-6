@@ -140,12 +140,19 @@
 	"buffers":
 	[
 		{
-			"file": "Homework/hw3.tex",
+			"file": "ProgrammingAssignments/Assignment3/memTemplate.txt",
 			"settings":
 			{
-				"buffer_size": 2253,
-				"line_ending": "Unix",
-				"name": "Homework 3"
+				"buffer_size": 2438,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "ProgrammingAssignments/Assignment3/sample.txt",
+			"settings":
+			{
+				"buffer_size": 237,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -234,11 +241,13 @@
 	"expanded_folders":
 	[
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems",
-		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3",
 		"/home/mitchel/Documents/Div 2/Semester 6/workspace"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework/hw3.tex",
 		"/home/mitchel/Downloads/Makefile",
 		"/home/mitchel/Downloads/Makefile (1)",
 		"/home/mitchel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -389,31 +398,59 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Homework/hw3.tex",
+					"file": "ProgrammingAssignments/Assignment3/memTemplate.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2253,
+						"buffer_size": 2438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1508,
-								1508
+								2039,
+								2039
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Homework 3",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 165.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ProgrammingAssignments/Assignment3/sample.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -482,7 +519,7 @@
 		[
 			[
 				"",
-				"~/Documents/Division-2/Semester-6/Database Driven Websites/Database-Driven-Websites.sublime-project"
+				"~/Documents/Division-2/Semester-6/Algorithms/Algorithms.sublime-project"
 			]
 		],
 		"width": 380.0
