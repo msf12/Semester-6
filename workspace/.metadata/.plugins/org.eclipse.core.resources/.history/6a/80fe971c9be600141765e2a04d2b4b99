@@ -1,0 +1,34 @@
+import java.util.Arrays;
+
+
+public class SegmentedMM {
+	
+
+	
+	public int segmentAllocate(int pid, int text_size, int data_size, int heap_size)
+	{
+		int allocated = -1; //was allocation successful
+		int[] addresses = new int[3]; //three memory addresses for the process
+		
+		int[] sizes = new int[]{text_size,data_size,heap_size}; //array made for easy size sorting of the three segments
+		Arrays.sort(sizes);
+		
+		for(int i = 0,j=0; memory.get(i).empty; i++) //iterate through memory - since the segments are sorted
+		{
+			MemChunk temp = memory.get(i);
+			if(temp.size >= sizes[j])
+			{
+				memory.add(new MemChunk(temp.fAddress,sizes[j]));
+				if(temp.fAddress+sizes[j] == temp.fAddress+temp.size)
+					memory.remove(temp);
+				else
+					temp.fAddress += sizes[j];
+				
+			}
+		}
+		
+		table.add(pid, addresses);
+		return allocated;
+	}
+
+}

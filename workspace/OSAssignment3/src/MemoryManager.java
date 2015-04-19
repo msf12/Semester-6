@@ -1,65 +1,32 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MemoryManager {
 	
 	private final int MEMSIZE,POLICY;
-	private List<int[]> table;
-	private List<MemChunk> memory;
-	
-	private class MemChunk implements Comparable {
-		
-		private int fAddress, size; //location in memory and size
-		private boolean empty; //is there a process here
-		
-		public MemChunk(int fAddress, int size)
-		{
-			this.fAddress = fAddress;
-			this.size = size;
-			empty = true;
-		}
-		
-		public int compareTo(Object arg0) {
-			MemChunk other = (MemChunk)arg0;
-			if(other.empty && !this.empty)
-				return 1;
-			else if(this.empty && !other.empty)
-				return -1;
-			else if(this.empty && other.empty)
-			{
-				if(this.size > other.size)
-					return 1;
-				else if(this.size < other.size)
-					return -1;
-				else
-					return 0;
-			}
-			else
-				return 0;
-		}
-		
-		
-		
-	}
+	private SegmentedMM smem;
 	
 	public MemoryManager(int bytes, int policy) 
 	{ 
 		// intialize memory with these many bytes.
 		MEMSIZE = bytes;
 		POLICY = policy;
-		table = new ArrayList<int[]>();
-		memory = new ArrayList<MemChunk>();
-		memory.add(new MemChunk(0,MEMSIZE));
+		if(policy == 0)
+			smem = new SegmentedMM(bytes);
 	}
 
 	public int allocate(int bytes, int pid, int text_size, int data_size, int heap_size)
-	{ 
+	{
 		if(POLICY==0)
 		{
 			if(bytes != (text_size+data_size+heap_size))
 				return -1;
-			return segmentAllocate(pid, text_size, data_size, heap_size);
+			int allocation = smem.allocate(pid, text_size, data_size, heap_size);
+			if(allocation > 0)
+				System.out.println("Allocation failed: external fragmentation");
+			else if (allocation < 0)
+				System.out.println("Allocation failed: not enough memory");
+			else
+				return 1;
+			return -1;
 		}
 		else
 			return pageAllocate(bytes, pid);
@@ -76,32 +43,6 @@ public class MemoryManager {
 	 
 	}
 	
-	private int segmentAllocate(int pid, int text_size, int data_size, int heap_size)
-	{
-		int allocated = -1; //was allocation successful
-		int[] addresses = new int[3]; //three memory addresses for the process
-		
-		int[] sizes = new int[]{text_size,data_size,heap_size}; //array made for easy size sorting of the three segments
-		Arrays.sort(sizes);
-		
-		for(int i = 0,j=0; memory.get(i).empty; i++) //iterate through memory - since the segments are sorted
-		{
-			MemChunk temp = memory.get(i);
-			if(temp.size >= sizes[j])
-			{
-				memory.add(new MemChunk(temp.fAddress,sizes[j]));
-				if(temp.fAddress+sizes[j] == temp.fAddress+temp.size)
-					memory.remove(temp);
-				else
-					temp.fAddress += sizes[j];
-				
-			}
-		}
-		
-		table.add(pid, addresses);
-		return allocated;
-	}
-	
 	private int pageAllocate(int bytes, int pid)
 	{
 		return -1;
@@ -109,6 +50,10 @@ public class MemoryManager {
 
 	public int deallocate(int pid)
 	{ 
+		if(POLICY==0)
+		{
+			return smem.deallocate(pid);
+		}
 		return -1;
 		//deallocate memory allocated to this process
 		// return 1 if successful, -1 otherwise with an error message 
@@ -166,8 +111,13 @@ public class MemoryManager {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		MemoryManager m = new MemoryManager(1000,0);
+		m.allocate(300, 1, 50, 150, 100);
+		m.allocate(300, 2, 50, 150, 100);
+		m.allocate(300, 3, 50, 150, 100);
+		m.allocate(300, 4, 50, 150, 100);
+		m.deallocate(1);
+		m.deallocate(2);
 	}
 
 }
