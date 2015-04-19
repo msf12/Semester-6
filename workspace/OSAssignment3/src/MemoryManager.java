@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 
 public class MemoryManager {
 	
@@ -5,7 +9,7 @@ public class MemoryManager {
 	private SegmentedMM smem;
 	
 	public MemoryManager(int bytes, int policy) 
-	{ 
+	{
 		// intialize memory with these many bytes.
 		MEMSIZE = bytes;
 		POLICY = policy;
@@ -21,9 +25,9 @@ public class MemoryManager {
 				return -1;
 			int allocation = smem.allocate(pid, text_size, data_size, heap_size);
 			if(allocation > 0)
-				System.out.println("Allocation failed: external fragmentation");
+				System.out.println("Allocation failed: external fragmentation\n");
 			else if (allocation < 0)
-				System.out.println("Allocation failed: not enough memory");
+				System.out.println("Allocation failed: not enough memory\n");
 			else
 				return 1;
 			return -1;
@@ -49,7 +53,7 @@ public class MemoryManager {
 	}
 
 	public int deallocate(int pid)
-	{ 
+	{
 		if(POLICY==0)
 		{
 			return smem.deallocate(pid);
@@ -60,64 +64,33 @@ public class MemoryManager {
 	}
 
 	public void printMemoryState()
-	{ 
-		// print out current state of memory
-		// the output will depend on the memory allocator being used.
-
-
-		// SEGMENTATION Example:
-		// Memory size = 1024 bytes, allocated bytes = 179, free = 845
-		// There are currently 10 holes and 3 active process
-		//
-		// Hole list:
-		// 	hole 1: start location = 0, size = 202
-		// ...
-		//
-		// Process list:
-		// process id=34, size=95 allocation=95
-		// 	text start=202, size=25
-		// 	data start=356, size=16
-		// 	heap start=587, size=54
-		// process id=39, size=55 allocation=65
-		// ...
-		//
-		// Total Internal Fragmentation = 10 bytes
-		// Failed allocations (No memory) = 2
-		// Failed allocations (External Fragmentation) = 7 
-
-		// PAGING Example:
-		// Memory size = 1024 bytes, total pages = 32
-		// allocated pages = 6, free pages = 26
-		// There are currently 3 active process
-		// Free Page list:
-		// 	2,6,7,8,9,10,11,12...
-		//
-		// Process list:
-		// Process id=34, size=95 bytes, number of pages=3
-		// 	Virt Page 0 -> Phys Page 0 used: 32 bytes
-		// 	Virt Page 1 -> Phys Page 3 used: 32 bytes
-		// 	Virt Page 2 -> Phys Page 4 used: 31 bytes
-		//
-		// Process id=39, size=55 bytes, number of pages=2
-		// 	Virt Page 0 -> Phys Page 1 used: 32 bytes
-		// 	Virt Page 1 -> Phys Page 13 used: 23 bytes
-		//
-		// Process id=46, size=29 bytes, number of pages=1
-		// 	Virt Page 0 -> Phys Page 5 used: 29 bytes 
-		//
-		// Total Internal Fragmentation = 13 bytes
-		// Failed allocations (No memory) = 2
-		// Failed allocations (External Fragmentation) = 0 
+	{
+		if(POLICY==0)
+		{
+			smem.printMemoryState();
+		}
 	}
 	
-	public static void main(String[] args) {
-		MemoryManager m = new MemoryManager(1000,0);
-		m.allocate(300, 1, 50, 150, 100);
-		m.allocate(300, 2, 50, 150, 100);
-		m.allocate(300, 3, 50, 150, 100);
-		m.allocate(300, 4, 50, 150, 100);
-		m.deallocate(1);
-		m.deallocate(2);
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		Scanner scan = new Scanner(new File("/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/sample.txt"));
+		MemoryManager m = new MemoryManager(scan.nextInt(),scan.nextInt());
+		while(scan.hasNext())
+		{
+			switch (scan.next()) {
+			case "A":
+				m.allocate(scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt());
+				break;
+			case "D":
+				m.deallocate(scan.nextInt());
+				break;
+			case "P":
+				m.printMemoryState();
+				break;
+			default:
+				break;
+			}
+		}
 	}
 
 }
