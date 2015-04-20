@@ -1,5 +1,5 @@
 *.pydevproject
-.metadata
+workspace/.metadata
 .gradle
 bin/
 tmp/

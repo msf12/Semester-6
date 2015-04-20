@@ -1,9 +1,0 @@
-Mitchel Fields
-
-To run:
-$ javac Scheduler.java
-$ java Scheduler
-
-Maps were chosen because they make it easier to support nonsequential PIDs should the program be changed to support that.
-The algorithms themselves are not made for nonsequential PIDs; they were chosen for their ease to write.
-The only tricky algorithm is Round Robbin, which adds the total time until the final time a given job is scheduled to the total waiting time, relying on the fact that every time a job is run before being completed that running time is removed from the total waiting time (that job is not waiting for that time slice). This computes the correct total wait time, but could be simpler.
