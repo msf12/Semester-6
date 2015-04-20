@@ -140,7 +140,10 @@
 	"buffers":
 	[
 		{
+			"contents": "class MemoryManager {\npublic MemoryManager(int bytes, int policy) \n{ \n	// intialize memory with these many bytes.\n	// Use segmentation if policy==0, paging if policy==1 \n}\n\npublic int allocate(int bytes, int pid, int text_size, int data_size, int heap_size)\n{ \n	//allocate this many bytes to the process with this id \n	//assume that each pid is unique to a process \n	//if using the Segmentation allocator: size of each segment is: text_size, 		//..data_size, and heap_size.\n	//Verify that text_size + data_size + heap_size = bytes\n	//If using the paging allocator, simply ignore the segment size variables \n	//Return 1 if successful \n	//Return -1 if unsuccessful \n	//Print an error indicating whether there wasn't sufficient memory or whether you 	//..ran into external fragmentation\n \n}\n\npublic int deallocate(int pid)\n{ \n	//deallocate memory allocated to this process\n	// return 1 if successful, -1 otherwise with an error message \n}\n\npublic void printMemoryState()\n{ \n	// print out current state of memory\n	// the output will depend on the memory allocator being used.\n\n\n	// SEGMENTATION Example:\n	// Memory size = 1024 bytes, allocated bytes = 179, free = 845\n	// There are currently 10 holes and 3 active process\n	//\n	// Hole list:\n	// 	hole 1: start location = 0, size = 202\n	// ...\n	//\n	// Process list:\n	// process id=34, size=95 allocation=95\n	// 	text start=202, size=25\n	// 	data start=356, size=16\n	// 	heap start=587, size=54\n	// process id=39, size=55 allocation=65\n	// ...\n	//\n	// Total Internal Fragmentation = 10 bytes\n	// Failed allocations (No memory) = 2\n	// Failed allocations (External Fragmentation) = 7 \n\n	// PAGING Example:\n	// Memory size = 1024 bytes, total pages = 32\n	// allocated pages = 6, free pages = 26\n	// There are currently 3 active process\n	// Free Page list:\n	// 	2,6,7,8,9,10,11,12...\n	//\n	// Process list:\n	// Process id=34, size=95 bytes, number of pages=3\n	// 	Virt Page 0 -> Phys Page 0 used: 32 bytes\n	// 	Virt Page 1 -> Phys Page 3 used: 32 bytes\n	// 	Virt Page 2 -> Phys Page 4 used: 31 byte\ns	//\n	// Process id=39, size=55 bytes, number of pages=2\n	// 	Virt Page 0 -> Phys Page 1 used: 32 bytes\n	// 	Virt Page 1 -> Phys Page 13 used: 23 bytes\n	//\n	// Process id=46, size=29 bytes, number of pages=1\n	// 	Virt Page 0 -> Phys Page 5 used: 29 bytes \n	//\n	// Total Internal Fragmentation = 13 bytes\n	// Failed allocations (No memory) = 2\n	// Failed allocations (External Fragmentation) = 0 \n} }",
 			"file": "ProgrammingAssignments/Assignment3/memTemplate.txt",
+			"file_size": 2438,
+			"file_write_time": 130736784716864701,
 			"settings":
 			{
 				"buffer_size": 2438,
@@ -247,6 +250,7 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/.gitignore",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework/hw3.tex",
 		"/home/mitchel/Downloads/Makefile",
 		"/home/mitchel/Downloads/Makefile (1)",
@@ -409,8 +413,8 @@
 						"selection":
 						[
 							[
-								2039,
-								2039
+								2040,
+								2040
 							]
 						],
 						"settings":
@@ -419,7 +423,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 36.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
