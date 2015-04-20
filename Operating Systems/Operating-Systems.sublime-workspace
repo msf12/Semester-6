@@ -348,6 +348,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/.",
 			" \n",
 			"-|",
 			"identify",
@@ -523,7 +524,7 @@
 		[
 			[
 				"",
-				"~/Documents/Division-2/Semester-6/Algorithms/Algorithms.sublime-project"
+				"~/Documents/Division-2/Semester-6/Database Driven Websites/Database-Driven-Websites.sublime-project"
 			]
 		],
 		"width": 380.0
