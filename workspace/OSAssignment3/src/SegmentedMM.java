@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -18,6 +17,7 @@ public class SegmentedMM {
 				memf; //total memory-fragmentation allocation failures
 	private List<Hole> memory; //list of free memory
 	private Map<Integer,Map<Integer,Integer>> table;
+	private Map<Integer,Integer> frag;
 	
 	private class Hole implements Comparable<Object> {
 		
@@ -51,6 +51,7 @@ public class SegmentedMM {
 		memory = new ArrayList<Hole>();
 		memory.add(new Hole(0,memsize));
 		table = new HashMap<Integer,Map<Integer,Integer>>();
+		frag = new HashMap<Integer, Integer>();
 	}
 	
 	public int allocate(int pid, int text_size, int data_size, int heap_size)
@@ -83,7 +84,7 @@ public class SegmentedMM {
 				order = new int[]{0,1,2};
 		
 		//find the addresses to allocate at
-		for(int i = 0,j = 0;i<memory.size()&&addresses[2]==-1;i++)
+		for(int i = 0,j = 0;i<memory.size()&&addresses[order[2]]==-1;i++)
 		{
 			Hole temp = memory.get(i);
 			int segmentSize = segments[order[j]];
@@ -120,11 +121,12 @@ public class SegmentedMM {
 				Hole temp = memory.get(chosenHoles[i]);
 				temp.size -= segmentSize;
 				temp.address += segmentSize;
-				if(temp.size <= 16)
+				if(temp.size <= 16 && temp.size > 0)
 				{
 					todelete.add(temp);
 					segments[order[i]] += temp.size;
 					intfrag += temp.size;
+					frag.put(pid, temp.size);
 				}
 				
 				freemem -= segmentSize; //update amount of free memory
@@ -158,10 +160,15 @@ public class SegmentedMM {
 
 	public int deallocate(int pid)
 	{
-		if(table.get(pid) == null)
+		if(!table.containsKey(pid))
 			return -1;
 		
 		Map<Integer,Integer> process = table.remove(pid);
+		if(frag.containsKey(pid))
+		{
+			intfrag -= frag.get(pid);
+			frag.remove(pid);
+		}
 		
 		for(Map.Entry<Integer, Integer> e : process.entrySet())
 		{
