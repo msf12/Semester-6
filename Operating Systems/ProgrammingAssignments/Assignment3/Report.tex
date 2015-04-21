@@ -8,7 +8,7 @@
 	\item I was lazier with paging. I used a simple boolean array where true signifies that a page is being used and brute-force searched it for empty pages.
 	\item To track page mappings I used another nested class called Process which held a two dimensional int array. Index into the outer array represents virtual page number, the first index of the inner array holds the physical page number, and the latter index holds the number of bytes used in that page.
 	\item Paging has no external fragmentation due to the nature of the page structure. However, as a result, it accumulates far more internal fragmentation. On the other hand, pure segmentation has no internal fragmentation and, as such, my approximation of segmentation (which adds holes with 16 bytes or less to the segment currently being allocated) has much less internal fragmentation than paging. However, because segmented memory is not divided into equivalently sized segments, segmentation causes much greater external fragmentation.
-	\item The following test case has no internal fragmentation as every process either leaves greater than 16 bytes remaining in the holes it is placed in or completely fills said hole. This removes cases where the algorithm would include unused memory in a process. This test case also has no cases where a process cannot be allocated sufficient memory due to external fragmentation.
+	\item The following test case has no internal fragmentation as every process either leaves greater than 16 bytes remaining in the holes it is placed in or completely fills said hole. This removes cases where the algorithm would include unused memory in a process. This test case also has no cases where a process cannot be allocated sufficient memory due to external fragmentation.\\
 	1024 0\\
 	A 234 1 80 100 54\\
 	A 458 2 300 98 60\\
@@ -31,7 +31,7 @@
 	D 6\\
 	A 245 11 120 64 61\\
 	P\\
-	\item The following test case is made entirely of processes whose byte counts are 1 over an even multiple of 32. As a result, the processes all only use 1 byte of their final page, leading to worst-case internal fragmentation
+	\item The following test case is made entirely of processes whose byte counts are 1 over an even multiple of 32. As a result, the processes all only use 1 byte of their final page, leading to worst-case internal fragmentation\\
 	1024 1\\
 	A 161 1 80 100 54\\
 	A 161 2 300 98 60\\

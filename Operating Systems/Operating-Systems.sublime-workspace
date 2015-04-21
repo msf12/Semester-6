@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"int",
+				"internal"
+			],
+			[
+				"segment",
+				"segmentation"
+			],
+			[
+				"implem",
+				"implementation"
+			],
+			[
 				"address",
 				"addresses"
 			],
@@ -139,22 +151,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "ProgrammingAssignments/Assignment3/memTemplate.txt",
-			"settings":
-			{
-				"buffer_size": 2437,
-				"line_ending": "CR"
-			}
-		},
-		{
-			"file": "ProgrammingAssignments/Assignment3/sample.txt",
-			"settings":
-			{
-				"buffer_size": 237,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -241,12 +237,18 @@
 	"expanded_folders":
 	[
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3",
 		"/home/mitchel/Documents/Div 2/Semester 6/workspace"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/memTemplate.txt",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/sample.txt",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/test.txt",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/Report.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/README",
 		"/home/mitchel/Documents/Division-2/Semester-6/.gitignore",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/Homework/hw3.tex",
 		"/home/mitchel/Downloads/Makefile",
@@ -395,66 +397,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "ProgrammingAssignments/Assignment3/memTemplate.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2437,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2039,
-								2039
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 684.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ProgrammingAssignments/Assignment3/sample.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								6
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

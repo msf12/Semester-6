@@ -1,0 +1,10 @@
+Mitchel Fields
+
+To run (where # = the number of the task):
+$ javac MemoryManager.java
+$ java MemoryManager path/to/file
+
+Used separate classes to help keep things organized.
+Used nested classes in place of structs.
+Used many potentially unecessary variables to make managing and tracking various data easier in the rather quickly written code.
+Focused more on functionality than efficiency.
