@@ -35,7 +35,12 @@ public class MemoryManager {
 			return -1;
 		}
 		else
-			return pmem.allocate(bytes, pid);
+		{
+			int allocation = pmem.allocate(bytes, pid);
+			if(allocation != 0)
+				System.out.println("Allocation failed: not enough memory\n");
+			return allocation == 0 ? 1 : -1;
+		}
 	 
 	}
 
@@ -59,6 +64,8 @@ public class MemoryManager {
 		{
 			smem.printMemoryState();
 		}
+		else
+			pmem.printMemoryState();
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException
@@ -81,6 +88,7 @@ public class MemoryManager {
 				break;
 			}
 		}
+		scan.close();
 	}
 
 }
