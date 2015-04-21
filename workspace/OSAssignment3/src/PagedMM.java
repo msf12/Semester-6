@@ -65,7 +65,7 @@ public class PagedMM {
 			}
 		}
 		pages[pagecount-1][1] = (bytes+31)%32 + 1;
-		intfrag += pages[pagecount-1][1];
+		intfrag += 32-pages[pagecount-1][1];
 		
 		prcs.add(new Process(pid, bytes, pages));
 		
@@ -82,7 +82,7 @@ public class PagedMM {
 				{
 					physpages[i[0]] = false;
 					if(i[1] < 32)
-						intfrag -= i[1];
+						intfrag -= 32-i[1];
 					numpages--;
 				}
 				numprcs--;

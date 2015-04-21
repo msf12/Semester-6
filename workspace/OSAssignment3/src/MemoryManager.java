@@ -70,7 +70,7 @@ public class MemoryManager {
 	
 	public static void main(String[] args) throws FileNotFoundException
 	{
-		Scanner scan = new Scanner(new File("/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/sample.txt"));
+		Scanner scan = new Scanner(new File("/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/test.txt"));
 		MemoryManager m = new MemoryManager(scan.nextInt(),scan.nextInt());
 		while(scan.hasNext())
 		{
