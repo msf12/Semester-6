@@ -2,3 +2,28 @@
   <strong>Title:</strong>
   <%= @forumthread.title %>
 </p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @forumthread.user.username %>
+</p>
+
+<p>
+	<%= @forumthread.initial_post %>
+</p>
+
+<p>
+<%= link_to "Add to this thread", new_forum_thread_post_path(@forumthread) %>
+</p>
+
+<% if !@forumthread.posts.blank? %>
+<% for item in @forumthread.posts %>
+<p>
+	<%= item.contents %>
+</p>
+<p>
+<%= link_to "Add to this thread", new_forum_thread_post_path(@forumthread) %>
+</p>
+<% end %>
+<% else %>
+<% end %>

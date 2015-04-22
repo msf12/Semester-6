@@ -1,6 +1,7 @@
-<h1>Look at da threads!</h1>
+<h1>Welcome to the swaggenist forums ever!</h1>
+<h2>420blazeit</h2>
 
-<%= link_to "New thread", new_forum_thread_path %>
+<%= link_to "New thread", current_user ? new_forum_thread_path : new_user_session_path %>
 
 <table>
   <tr>
@@ -10,8 +11,8 @@
 
   <% @forumthreads.each do |thread| %>
   <tr>
-    <td><%= thread.title %></td>
-    <td><%= thread.user %></td>
+    <td><%= link_to thread.title, forum_thread_path(thread) %></td>
+    <td><%= link_to thread.user.username, user_path(thread.user) %></td>
   </tr>
   <% end %>
 </table>

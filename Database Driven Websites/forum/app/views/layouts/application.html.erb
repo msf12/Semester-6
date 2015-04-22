@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <div id="user_nav">
    <% if current_user %>
+      <%= link_to "View profile", user_path(:current) %>
       <%= link_to "Edit profile", edit_user_path(:current) %>
       <%= link_to "Logout", user_session_path(current_user), method: :delete %>
    <% else %>
@@ -9,8 +10,7 @@
    <% end %>
 </div>
 <div>
-  <%= link_to "Main Menu", :controller => "welcome" %>
-  <%= link_to "Threads", :controller => "forum_threads" %>
+  <%= link_to "Main Menu", :controller => "forum_threads" %>
 </div>
 <html>
 <head>

@@ -1,23 +1,21 @@
 Rails.application.routes.draw do
-  get 'threads/new'
+  # get 'threads/new'
 
-  get 'threads/index'
+  # get 'threads/index'
 
-  get 'threads/show'
+  # get 'threads/show'
 
-  get 'threads/new'
+  # get 'threads/new'
 
-  get 'threads/index'
+  # get 'threads/index'
 
-  get 'threads/show'
-
-  get 'welcome/index'
+  # get 'threads/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+   root 'forum_threads#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

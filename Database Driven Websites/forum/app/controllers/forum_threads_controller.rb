@@ -13,6 +13,7 @@ class ForumThreadsController < ApplicationController
 
 	def create
 		@forumthread = ForumThread.new(thread_params)
+		@forumthread.user = current_user
 
 		if @forumthread.save
 			redirect_to @forumthread
@@ -44,6 +45,6 @@ class ForumThreadsController < ApplicationController
 
 	private
 	def thread_params
-		params.require(:forumthread).permit(:title)
+		params.require(:forumthread).permit(:title,:initial_post)
 	end
 end

@@ -15,9 +15,10 @@ ActiveRecord::Schema.define(version: 20150422150314) do
 
   create_table "forum_threads", force: :cascade do |t|
     t.string   "title"
+    t.string   "initial_post"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "forum_threads", ["user_id"], name: "index_forum_threads_on_user_id"
