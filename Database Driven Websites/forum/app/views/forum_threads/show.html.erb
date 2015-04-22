@@ -1,29 +1,34 @@
-<p>
-  <strong>Title:</strong>
-  <%= @forumthread.title %>
-</p>
+<h2><%= @forumthread.title %></h2>
 
 <p>
-  <strong>Author:</strong>
-  <%= @forumthread.user.username %>
-</p>
-
-<p>
-	<%= @forumthread.initial_post %>
-</p>
-
-<p>
-<%= link_to "Add to this thread", new_forum_thread_post_path(@forumthread) %>
+<hr>
+	<%= @forumthread.initial_post %><br>
+	Posted by <%= link_to @forumthread.user.username, user_path(@forumthread.user) %> at <%= @forumthread.created_at %>
 </p>
 
 <% if !@forumthread.posts.blank? %>
 <% for item in @forumthread.posts %>
 <p>
-	<%= item.contents %>
-</p>
-<p>
-<%= link_to "Add to this thread", new_forum_thread_post_path(@forumthread) %>
+	<hr>
+	<%= item.contents %><br>
+	Posted by <%= link_to item.user.username, user_path(item.user) %> at <%= item.created_at %><br>
 </p>
 <% end %>
 <% else %>
+<% end %>
+<hr>
+
+<% if current_user %>
+<h3>Add to this thread</h3>
+<%= form_for([@forumthread, @forumthread.posts.build]) do |f| %>
+  <p>
+    <%= f.label :Post_contents %><br>
+    <%= f.text_area :contents %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<% else %>
+	<%= link_to "Login to post to a thread", new_user_session_path %>
 <% end %>
