@@ -15,14 +15,19 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 
 		if @user.save
-			redirect_to @user
+    		flash[:notice] = "Registration successful."
+			redirect_to root_url
 		else
-			render 'new'
+			render :action => 'new'
 		end
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		if current_user
+			@user = User.find(current_user)
+		else
+			@user = User.find(params[:id])
+		end
 	end
 
 	def update
@@ -44,7 +49,7 @@ class UsersController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:username,:password,:description)
+		params.require(:user).permit(:username,:email,:password,:password_confirmation)
 	end
 
 end

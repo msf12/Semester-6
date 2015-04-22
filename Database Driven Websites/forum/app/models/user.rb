@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-	validates :name, :presence => true
-	validates :password, :presence => true
+	acts_as_authentic
 	
 	has_many :posts
 	has_many :forum_threads

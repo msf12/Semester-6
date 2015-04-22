@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413211830) do
+ActiveRecord::Schema.define(version: 20150422150314) do
 
   create_table "forum_threads", force: :cascade do |t|
     t.string   "title"
@@ -33,12 +33,20 @@ ActiveRecord::Schema.define(version: 20150413211830) do
   add_index "posts", ["forum_thread_id"], name: "index_posts_on_forum_thread_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
+  create_table "user_sessions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "username"
-    t.string   "password"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

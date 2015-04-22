@@ -244,6 +244,9 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/Gemfile",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/user.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150413211536_create_users.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/memTemplate.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/sample.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment3/test.txt",
@@ -465,7 +468,7 @@
 		[
 			[
 				"",
-				"~/default.sublime-project"
+				"~/Documents/Division-2/Semester-6/Database Driven Websites/Database-Driven-Websites.sublime-project"
 			]
 		],
 		"width": 380.0
