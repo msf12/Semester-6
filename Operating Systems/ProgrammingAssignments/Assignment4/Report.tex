@@ -1,0 +1,12 @@
+\documentclass{article}
+
+\begin{document}
+
+\begin{itemize}
+	\item The INODE can support 10112 blocks - $12+100+(100*100)$
+	\item Any block $i$ in the range 0 to 11 is in the direct String array at the address $i$
+	\item Any block $i$ in the range 12 to 111 is in the indirect String array at the address $i-12$ (as the direct array is the first 12 blocks)
+	\item Any block $i$ in the range 112 onward is in the double indirect array of String arrays at the address $i-112$ (as the direct and indirect arrays are the first 112 blocks)
+	\item Block file $i$ is named blocki.txt. The logic for determining how the block is referenced is carried out internally based on its number.
+\end{itemize}
+\end{document}

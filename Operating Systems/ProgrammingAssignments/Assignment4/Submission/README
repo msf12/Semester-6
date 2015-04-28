@@ -1,0 +1,6 @@
+Mitchel Fields
+
+To run (where # = the number of the task):
+$ javac OSAssignment4.java Inode.java
+$ java MemoryManager path/to/file1 path/to/file2
+
