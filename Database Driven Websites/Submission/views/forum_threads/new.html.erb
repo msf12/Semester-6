@@ -1,0 +1,37 @@
+<h1>We's gonna create da thing</h1>
+
+<%= form_for :forumthread, url: forum_threads_path do |f| %>
+	
+
+	<% if @forumthread.errors.any? %>
+	<font color="red">
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@forumthread.errors.count, "error") %> prohibited
+				this thread from being saved:
+			</h2>
+	</font>
+			<ul>
+				<% @forumthread.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :Title %><br>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :Post %><br>
+		<%= f.text_area :initial_post %>
+	</p>
+
+	<p>
+		<%= f.submit "Save Thread"%>
+	</p>
+<% end %>
+
+<%= link_to "Back", :controller => "forum_threads" %>

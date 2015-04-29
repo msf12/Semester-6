@@ -1,0 +1,30 @@
+<p>
+	<strong>Username:</strong>
+	<%= @user.username %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @user.description %>
+</p>
+
+<p>
+	<strong>Threads</strong>
+</p>
+<% if !@user.forum_threads.blank? %>
+<% for item in @user.forum_threads %>
+<p>
+	<%= link_to item.title, forum_thread_path(item) %>    
+</p>
+<% end %>
+<% else %>
+
+<% end %>
+
+<p>
+	<% if @user == current_user %>
+	<%= link_to 'Delete', user_path(@user),
+	method: :delete,
+	data: { confirm: 'Are you sure?' } %>
+	<% end -%>
+</p>
