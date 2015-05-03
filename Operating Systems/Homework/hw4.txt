@@ -1,0 +1,44 @@
+d
+b
+a
+c
+a
+c
+c
+b
+b
+b
+d
+
+Deadlocks
+mutual exclusion - some resource must be unsharable between processes
+hold and wait - some process must both hold a resource and be waiting for a resource
+no preemption - processes must willingly give up resources they hold	
+circular wait - P1 is waiting on P2 is waiting on ... Pn is waiting on P1
+
+?
+
+Memory Management
+a. 100 nanoseconds
+b. 52*.75 + 100*.25 = 64 nanoseconds
+
+Virtual Memory
+a. 200*200 = 40000 4-byte ints = 160000 bytes / 256 = 625 pages
+b. 625 + 1 code page = 626 pages
+	code page is loaded once
+	ints are accessed in order 0, 200, 400,... at bytes 0,800,1600,...
+	each reference is on a new page so each int is a new fault
+	40,001 page faults
+
+IO and File Systems
+Buffering helps cope between processes that happen at different speeds, allows processes to wait less on write operations by buffering them to happen while the process continues to execute, and to cope with information of different package sizes (i.e. network packets vs HDD blocks)
+499 operations for a linked list
+2 for an inode: 1 to read the pointer to block pointers and 1 to access block 499
+
+Disk Scheduling
+a. 87, 75, 100, 116, 185, 22, 11, 3
+b. 1 + 12 + 25 + 16 + 69 + 163 + 11 + 8 = 305
+c. 100, 116, 185, 3, 11, 22, 75, 87
+d. 184
+
+Semaphores
