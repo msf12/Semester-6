@@ -155,14 +155,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Homework/Homework13.tex",
-			"settings":
-			{
-				"buffer_size": 2173,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -236,22 +228,27 @@
 	"expanded_folders":
 	[
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms",
-		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework"
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week5"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week8/Homework14.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week7/Homework13.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework12.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework13.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework11.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week5/Homework10.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework10.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework8.tex",
 		"/home/mitchel/Downloads/memTemplate.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/threads_controller.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Midterm/MidtermAnswers.tex",
-		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework11.tex",
-		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework8.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework5.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework4.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework3.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework2.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework6.tex",
-		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Homework10.tex",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/Homework/Homework8.tex",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/algs4/BST.java",
 		"/home/mitchel/Documents/Div 2/Semester 6/Algorithms/algs4/RectHV.java",
@@ -409,37 +406,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Homework/Homework13.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2158,
-								2158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

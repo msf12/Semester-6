@@ -341,12 +341,14 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Desktop/log.txt",
+		"/home/mitchel/.xinitrc",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/forum_thread.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/user.rb",
+		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/post.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/db/migrate/20150413211536_create_users.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/users/edit.html.erb",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/user.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Operating Systems/ProgrammingAssignments/Assignment4/input_file1.txt",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/post.rb",
-		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/models/forum_thread.rb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/posts/new.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/views/forum_threads/new.html.erb",
 		"/home/mitchel/Documents/Division-2/Semester-6/Database Driven Websites/forum/app/controllers/forum_threads_controller.rb",
@@ -739,7 +741,7 @@
 		[
 			[
 				"",
-				"~/Documents/Division-2/Semester-6/Operating Systems/Operating-Systems.sublime-project"
+				"~/default.sublime-project"
 			]
 		],
 		"width": 380.0
