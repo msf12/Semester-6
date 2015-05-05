@@ -3,31 +3,33 @@
 \usepackage{graphicx}
 
 \begin{document}
-\title{Homework 14}
+\title{Homework 15}
 \date{}
 \maketitle
 
-% 1. Spring 08 Final, #2a, #2b
-% 2. Fall 08 Final, #2a, #2b
+% 1. Fall 2009 Final, #4
+% 2. Fall 2010 Final, #5
+% 3. Textbook 4.3.1 and 4.4.1
 
 \paragraph{\Large 1. Spring 2008 Final Questions 2a and 2b}\mbox{}\\
-Consider the following weighted graph.\\
-\includegraphics[]{fin-s08-2.png}\\
+Run \textit{Dijkstra’s algorithm} on the weighted digraph below, starting at vertex $A$.\\
+\includegraphics[]{fin-f09-4.png}\\
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-	\item Complete the list of edges in the MST in the order that \textit{Kruskal's algorithm} includes them. For reference, the edge weights in ascending order are:\\
-	4  16  18  19  20  21  22  23  25  30  33  34  35  36  42  65\\
+	\item List the vertices in the order in which the vertices are dequeued (for the first time) from the priority queue and give the length of the shortest path from $A$.\\
+	
+	vertex: A C D F H E B G I\\
 
-	B-D D-G E-F C-H F-H C-G A-H
+	distance: 0 1 12 20 25 28 34 40 43
 
-	\item Complete the list of edges in the MST in the order that \textit{Prim's algorithm} includes them. Start Prim's algorithm from vertex A.\\
+	\item Draw the edges in the shortest path tree with thick lines in the figure above.\\
 
-	A-H C-H F-H E-F C-G D-G B-D 
+	\includegraphics[]{fin-f09-4b.png}
 
 \end{enumerate}
 
 
-\paragraph{\Large 2. Fall 2008 Final Questions 2a and 2b}\mbox{}\\
+\paragraph{\Large 2. Fall 2010 Final Question 5}\mbox{}\\
 Consider the following weighted graph with 10 vertices and 21 edges. Note that the edge weights are distinct integers between 1 and 21.\\
 \includegraphics[]{fin-f08-2.png}\\
 \begin{enumerate}
