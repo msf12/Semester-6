@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.10)  5 MAY 2015 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.10)  6 MAY 2015 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -191,19 +191,18 @@ Overfull \hbox (102.05579pt too wide) in paragraph at lines 27--28
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fin-f09-4.png>]
-<fin-f08-2.png, id=15, 374.3586pt x 183.5658pt>
-File: fin-f08-2.png Graphic file (type png)
- <use fin-f08-2.png>
-Package pdftex.def Info: fin-f08-2.png used on input line 34.
-(pdftex.def)             Requested size: 374.35768pt x 183.56534pt.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 
-Overfull \hbox (29.35768pt too wide) in paragraph at lines 32--35
+<fin-f10-5.png, id=15, 377.9721pt x 177.0615pt>
+File: fin-f10-5.png Graphic file (type png)
+ <use fin-f10-5.png>
+Package pdftex.def Info: fin-f10-5.png used on input line 34.
+(pdftex.def)             Requested size: 377.97118pt x 177.06104pt.
+
+Overfull \hbox (32.97118pt too wide) in paragraph at lines 32--35
 [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
-
  []
 
 
@@ -211,34 +210,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[2 <./fin-f09-4b.png> <./fin-f10-5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[2 <./fin-f09-4b.png> <./fin-f08-2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 [3] (./Homework15.aux) ) 
 Here is how much of TeX's memory you used:
- 1502 strings out of 493109
- 21071 string characters out of 6140856
- 78983 words of memory out of 5000000
- 4973 multiletter control sequences out of 15000+600000
- 7636 words of font info for 27 fonts, out of 8000000 for 9000
+ 1506 strings out of 493109
+ 21109 string characters out of 6140856
+ 81983 words of memory out of 5000000
+ 4975 multiletter control sequences out of 15000+600000
+ 8255 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,23p,236b,195s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,23p,409b,205s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti10.pfb>
-Output written on Homework15.pdf (3 pages, 150230 bytes).
+mbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Homework15.pdf (3 pages, 164953 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

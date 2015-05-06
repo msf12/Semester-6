@@ -30,22 +30,50 @@ Run \textit{Dijkstra’s algorithm} on the weighted digraph below, starting at v
 
 
 \paragraph{\Large 2. Fall 2010 Final Question 5}\mbox{}\\
-Consider the following weighted graph with 10 vertices and 21 edges. Note that the edge weights are distinct integers between 1 and 21.\\
-\includegraphics[]{fin-f08-2.png}\\
+Run the eager version of Dijkstra’s algorithm on the following edge-weighted digraph, starting from vertex 0.\\
+\includegraphics[]{fin-f10-5.png}
 \begin{enumerate}
 \renewcommand{\theenumi}{\Alph{enumi}}
-	\item Complete the sequence of edges in the MST in the order that \textit{Kruskal's algorithm} includes them.\\
+	\item Complete the table of edgeTo[ ] and distTo[ ] values immediately after the first 5 vertices (0, 2, 3, 5, and 1) have been deleted from the priority queue and relaxed.\\
 
-	1 2 3 4 5 11 12 13 17
+	\begin{tabular}{c l c}
+	v & edgeTo[ ] & distTo[ ]\\
+	0 & \hspace{2mm}- & 0.0\\
+	1 & $2 \rightarrow 1$ 33.0 & 34.0\\
+	2 & $0 \rightarrow 2$ 1.0 & 1.0\\
+	3 & $2 \rightarrow 3$ 11.0 & 12\\
+	4 & $5 \rightarrow 4$ 33.0 & 53.0\\
+	5 & $3 \rightarrow 5$ 8.0 & 20.0\\
+	6 & $1 \rightarrow 6$ 5.0 & 39.0\\
+	7 & $5 \rightarrow 7$ 46.0 & 66.0\\
+	8 & \hspace{2mm}- & -
+	\end{tabular}
 
-	\item Complete the sequence of edges in the MST in the order that \textit{Prim's algorithm} includes them. Start Prim's algorithm from vertex $A$\\
+	\item Complete the table of edgeTo[ ] and distTo[ ] values immediately after the 6 th vertexhas been deleted from the priority queue and relaxed. Circle those values that changed from A.\\
 
-	4 3 2 1 5 13 12 17 11
+	\begin{tabular}{c l c}
+	v & edgeTo[ ] & distTo[ ]\\
+	0 & \hspace{2mm}- & 0.0\\
+	1 & $2 \rightarrow 1$ 33.0 & 34.0\\
+	2 & $0 \rightarrow 2$ 1.0 & 1.0\\
+	3 & $2 \rightarrow 3$ 11.0 & 12\\
+	\textbf{4} & $\mathbf{6 \rightarrow 4}$ \textbf{13.0} & \textbf{52.0}\\
+	5 & $3 \rightarrow 5$ 8.0 & 20.0\\
+	6 & $1 \rightarrow 6$ 5.0 & 39.0\\
+	\textbf{7} & $\mathbf{6 \rightarrow 7}$ \textbf{6.0} & \textbf{45.0}\\
+	\textbf{8} & $\mathbf{6 \rightarrow 8}$ \textbf{10.0} & \textbf{49.0}
+	\end{tabular}
+
 \end{enumerate}
 
-\paragraph{\Large 3. Study Guide Question}\mbox{}\\
-Would Kruskal's or Prim's algorithm work with edge-weighted digraphs?\\
+\paragraph{\Large 3. Question 4.3.1}\mbox{}\\
+Prove that you can rescale the weights by adding a positive constant to all of them or by multiplying them all by a positive constant without affecting the MST.\\
 
-No. It is possible to imagine a scenario in which the edge that either algorithm would pick could not be picked due to the direction of the graph's edges.
+Edge weights increased by a common number maintain the same differences from each other and, thus, quite obviously maintain the same MST. While multiplication by a common number does not maintain the exact edge differences, the edge ratios are preserved. Thus, any edge $E$ that was less than any other edge $E'$ must continue to be less than $E'$ when both are multiplied by a common factor.
+
+\paragraph{\Large 4. Question 4.4.1}\mbox{}\\
+True of false: Adding a constant to every edge weight does not change the solution to the single-source shortest-paths problem.\\
+
+False. In the case of negative edge weights, a constant can affect whether a path is the shortest.
 
 \end{document}
