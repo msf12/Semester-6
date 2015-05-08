@@ -155,22 +155,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "algs4/DirectedCycle.java",
-			"settings":
-			{
-				"buffer_size": 4768,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "algs4/Topological.java",
-			"settings":
-			{
-				"buffer_size": 3997,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/C++/C++.sublime-build",
 	"build_system_choices":
@@ -245,17 +229,21 @@
 	[
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Week11",
 		"/home/mitchel/Documents/Division-2/Semester-6/workspace"
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework17.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework16.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/algs4/DirectedCycle.java",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/algs4/Topological.java",
 		"/home/mitchel/Documents/Division-2/Semester-6/workspace/Assignment6/synsets.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/workspace/Assignment6/hypernyms.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/algs4/Digraph.java",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/algs4/SymbolDigraph.java",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week8/Homework15.tex",
-		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework16.tex",
 		"/home/mitchel/.local/share/Trash/files/log.txt",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week8/Homework14.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week5/Homework10.tex",
@@ -364,6 +352,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"small",
+			"&",
+			"\\d\\d \\d\\d &",
+			"not required",
+			"\\d \\d &",
+			"\\d \\w\\w\\w\\w\\w",
+			"8 sable",
 			"- &",
 			"\\n\\w\\w\\w\\w\\n",
 			"b",
@@ -431,73 +426,14 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "algs4/DirectedCycle.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 1755.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "algs4/Topological.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1080.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"input":
 	{
