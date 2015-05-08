@@ -1,0 +1,38 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.10)  8 MAY 2015 19:47
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**fin-f11-11.png fin-f12-6.png fin-s12-11.png Homework16.aux Homework16.log Hom
+ework16.pdf Homework16.tex Homework17.aux Homework17.log Homework17.pdf Homewor
+k17.tex
+(./fin-f11-11.png
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 ‰
+     PNG
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.1 ‰
+     PNG
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 493109
+ 287 string characters out of 6140856
+ 52967 words of memory out of 5000000
+ 3570 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,4p,170b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
