@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"tab",
+				"table	Table"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
 				"tikz",
 				"tikzpicture"
 			],
@@ -160,10 +168,10 @@
 	"buffers":
 	[
 		{
-			"file": "Homework/Week10/Homework18.tex",
+			"file": "Homework/Week11/Homework20.tex",
 			"settings":
 			{
-				"buffer_size": 3230,
+				"buffer_size": 191,
 				"line_ending": "Unix"
 			}
 		}
@@ -250,6 +258,8 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week10/Homework19.tex",
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week10/Homework18.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework16.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework17.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/algs4/DirectedCycle.java",
@@ -367,6 +377,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" c |",
+			" c ",
+			"| c |",
 			"[ ",
 			"small",
 			"&",
@@ -447,28 +460,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Homework/Week10/Homework18.tex",
+					"file": "Homework/Week11/Homework20.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3230,
+						"buffer_size": 191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3158,
-								3158
+								60,
+								60
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1155.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
