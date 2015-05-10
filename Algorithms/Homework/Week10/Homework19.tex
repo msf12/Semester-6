@@ -1,0 +1,64 @@
+\documentclass{article}
+
+% \usepackage{graphicx}
+\usepackage{tikz}
+% \usepackage{tikz-qtree}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\begin{document}
+\title{Homework 19}
+\date{}
+\maketitle
+
+% 1. Spring 2008 Final, #6
+% 2. Fall 2009 Final, #6
+% 3. Fall 2012 Final, #10
+
+\paragraph{\Large 1. Spring 2008 Final Question 6}\mbox{}\\
+Complete the following DFA to match precisely those strings (over the two letter alphabet) that contain bababba as a substring. State 0 is the start state and state 7 is the accept state.\\
+
+\begin{tabular}{c | c c c c c c c c}
+  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\ \hline
+a & 0 & 2 & 0 & 4 & 0 & 4 & 7 & 7 \\
+b & 1 & 1 & 3 & 1 & 5 & 6 & 1 & 7 
+\end{tabular}
+
+\paragraph{\Large 2. Fall 2009 Final Question 6}\mbox{}\\
+Create the Knuth-Morris-Pratt DFA for the string aacaaab over the alphabet \{ a, b, c \} by completing the following table. As usual, state 0 is the start state and state 7 is the accept state.\\
+
+\begin{tabular}{c | c c c c c c c c}
+  & 0 & 1 & 2 & 3 & 4 & 5 & 6\\ \hline
+a & 1 & 2 & 2 & 4 & 5 & 6 & 2\\
+b & 0 & 0 & 0 & 0 & 0 & 0 & 7\\
+c & 0 & 0 & 3 & 0 & 0 & 3 & 3
+\end{tabular}
+
+\paragraph{\Large 3. Fall 2012 Final Question 10}\mbox{}\\
+Suppose that you run the Boyer-Moore algorithm (the basic version considered in the textbook
+and lecture) to search for the pattern\\
+
+I \quad D \quad O \quad F \quad T \quad H \quad E\\
+
+in the text\\
+
+M \quad E \quad N \quad D \quad E \quad R \quad O \quad F \quad R \quad O \quad A \quad D \quad S \quad W \quad I \quad T \quad H \quad T \quad H \quad E \quad A \quad I \quad D \quad O \quad F \quad T \quad H \quad E\\
+
+Give the trace of the algorithm in the grid below, circling the characters in the pattern that
+get compared with the text.\\
+\hspace*{-115pt}
+\begin{tabular}{| p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} | p{8pt} |}
+M & E & N & D & E & R & O & F & R & O & A & D & S & W & I & T & H & T & H & E & A & I & D & O & F & T & H & E\\ \hline
+I & D & O & F & T & H & \circled{E} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\ \hline
+ &  &  &  & I & D & O & F & T & H & \circled{E} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\ \hline
+ &  &  &  &  &  &  &  &  &  &  & I & D & O & F & T & H & \circled{E} &  &  &  &  &  &  &  &  &  & \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  & I & D & O & \circled{F} & \circled{T} & \circled{H} & \circled{E} &  &  &  &  &  &  &  & \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  &  & I & D & O & F & T & H & \circled{E} &  &  &  &  &  &  & \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \circled{I} & \circled{D} & \circled{O} & \circled{F} & \circled{T} & \circled{H} & \circled{E}\\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\ \hline
+
+\end{tabular}
+\hspace*{-115pt}
+
+\end{document}
