@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.10)  10 MAY 2015 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.10)  10 MAY 2015 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,8 +22,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-No file Homework21.aux.
+) (./Homework21.aux)
 \openout1 = `Homework21.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -45,27 +44,63 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 6.
 
+
 LaTeX Warning: No \author given.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Overfull \hbox (94.58403pt too wide) in paragraph at lines 41--52
+[][] 
+ []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Homework21.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Homework21.aux) ) 
 Here is how much of TeX's memory you used:
- 226 strings out of 493109
- 2404 string characters out of 6140856
- 52967 words of memory out of 5000000
- 3768 multiletter control sequences out of 15000+600000
- 7290 words of font info for 26 fonts, out of 8000000 for 9000
+ 232 strings out of 493109
+ 2483 string characters out of 6140856
+ 57967 words of memory out of 5000000
+ 3771 multiletter control sequences out of 15000+600000
+ 7636 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,6n,17p,202b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb>
-Output written on Homework21.pdf (1 page, 28736 bytes).
+ 23i,6n,17p,192b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
+</
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on Homework21.pdf (2 pages, 57281 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 27 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

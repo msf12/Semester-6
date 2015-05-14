@@ -5,6 +5,53 @@
 \date{}
 \maketitle
 
-\paragraph{\Large Skipped as I took a course focusing on regular expressions, DFAs, and NFAs}
+% 1. Spring 2008 Final, #4
+% 2. Fall 2008 Final, #7
+% 3. Fall 2011 Final, #10b
+% 4. Textbook 5.5.3
+
+\paragraph{\Large 1. Spring 2008 Final Question 4}\mbox{}\\
+How many bits are in the Huffman encoding of the following message? (Do not count the bits to encode the table.)\\
+a b a a b a c a b a a b a c d a b a a b a c a b a a b a c d e\\
+For reference, the frequency of each symbol is given in the table below.\\
+
+\begin{tabular}{c | c | c | c | c}
+a & b & c & d & e\\ \hline
+4 & 16 & 8 & 2 & 1
+\end{tabular}\\\\
+
+57 bits
+
+\paragraph{\Large 2. Fall 2008 Final Question 7}\mbox{}\\
+You receive the following message encoded using LZW compression.\\
+97\\
+98\\
+128\\
+129\\
+131\\
+132\\
+130\\
+Finish decoding the message.\\
+
+a \quad b \quad a \quad b \quad b \quad a \quad b \quad a \quad b \quad b \quad a \quad b \quad b \quad a \quad b \quad b
+
+\paragraph{\Large 3. Fall 2011 Final Question 10b}\mbox{}\\
+Decode each of the following LZW-encoded messages or explain briefly why it is not a valid LZW-encoded message. (Recall that codeword 80 is reserved to signify end of file.)\\
+
+\begin{tabular}{| c | c |}
+\hline
+\textit{encoded message} & \textit{decoded message or brief explanation of why invalid}\\ \hline
+41 42 43 44 80 & A B C D\\ \hline
+42 41 4E 82 41 80 & B A N B A A \\ \hline
+42 41 83 80 & Invalid - codeword 83 can't have been defined yet\\ \hline
+41 42 81 82 80 & A B A B B A \\ \hline
+41 42 81 83 80 & A B A B A B A\\ \hline
+42 41 4E 44 41 4E 41 80 & Invalid - 41 4E would be replaced by 81 the second time it appears\\
+\hline
+\end{tabular}
+
+\paragraph{\Large 4. Question 5.5.3}\mbox{}\\
+Give an example of a uniquely decodable code that is not prefix free or suffix free.\\
+0011, 011, 11, 1110
 
 \end{document}

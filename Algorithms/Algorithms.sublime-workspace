@@ -5,7 +5,7 @@
 		[
 			[
 				"tab",
-				"table	Table"
+				"tab	Tabular"
 			],
 			[
 				"b",
@@ -168,10 +168,10 @@
 	"buffers":
 	[
 		{
-			"file": "Homework/Week11/Homework20.tex",
+			"file": "Homework/Week11/Homework21.tex",
 			"settings":
 			{
-				"buffer_size": 191,
+				"buffer_size": 1807,
 				"line_ending": "Unix"
 			}
 		}
@@ -258,6 +258,7 @@
 	],
 	"file_history":
 	[
+		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week11/Homework20.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week10/Homework19.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week10/Homework18.tex",
 		"/home/mitchel/Documents/Division-2/Semester-6/Algorithms/Homework/Week9/Homework16.tex",
@@ -377,6 +378,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"___",
+			"\\w\\n\\d+",
 			" c |",
 			" c ",
 			"| c |",
@@ -440,7 +443,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"Question ",
@@ -460,19 +463,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Homework/Week11/Homework20.tex",
+					"file": "Homework/Week11/Homework21.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 191,
+						"buffer_size": 1807,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								60,
-								60
+								1771,
+								1771
 							]
 						],
 						"settings":
@@ -480,7 +483,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
