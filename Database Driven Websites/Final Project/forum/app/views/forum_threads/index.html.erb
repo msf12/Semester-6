@@ -1,0 +1,18 @@
+<h1>Welcome to the swaggenist forums ever!</h1>
+<h2>420blazeit</h2>
+
+<%= link_to "New thread", current_user ? new_forum_thread_path : new_user_session_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+
+  <% @forumthreads.each do |thread| %>
+  <tr>
+    <td><%= link_to thread.title, forum_thread_path(thread) %></td>
+    <td><%= link_to thread.user.username, user_path(thread.user) %></td>
+  </tr>
+  <% end %>
+</table>
